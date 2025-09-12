@@ -1,0 +1,10 @@
+<IfModule mod_headers.c>
+  <FilesMatch "tips\.csv$">
+    FileETag None
+    Header unset ETag
+    Header unset Last-Modified
+    Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+  </FilesMatch>
+</IfModule>

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BestValueBets.com</title>
   <link rel="icon" href="favicon.png" type="image/x-icon">
   <style>
@@ -11,7 +12,7 @@
     th { background-color: #f0f0f0; }
     .win, .half-win { background-color: #c6f6c6; }
     .loss, .half-lose { background-color: #f6c6c6; }
-    .push { background-color: #eee; }
+    .push, .void { background-color: #eee; }
     canvas { border: 1px solid #ccc; margin-top: 20px; display: block; }
 
 
@@ -54,11 +55,6 @@
   	max-width: 100%;
      }
 
-@media (max-width: 600px) {
-  .responsive-logo {
-    height: 100px;
-  }
-}
 
 .admin-section {
   font-size: 0.9em;
@@ -71,18 +67,35 @@
   border-radius: 8px;
 }
 
-/* Mobil: låt boxen gå kant-till-kant */
-@media (max-width: 600px) {
-  .disclaimer-box {
-    margin-left: -20px;  /* tar ut body-marginen */
-    margin-right: -20px;
-    border-radius: 0;    /* ser bättre ut utan rundade hörn på helbredd */
-  }
-}
 .new-tip {
   background-color: #fff9c4; /* mjuk ljusgul */
   border-radius: 6px;
 }
+
+
+
+	 	 
+  @media (max-width: 600px) {
+  .responsive-logo {
+    height: 100px;
+  }
+  
+
+  body {
+    margin: 0 20px; /* 10px på vänster och höger */
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+
+  .disclaimer-box {
+    width: auto;        /* så att marginalerna syns */
+    width: 165%;
+    border-radius: 8px;
+    
+}
+}
+
 
   </style>
 </head>
@@ -90,9 +103,11 @@
 
 <div style="display: flex; align-items: center; gap: 12px;">
   <img src="logo.png" alt="BestValueBets Logo" class="responsive-logo">
-</div>
+</div>  
 
-<canvas id="graph-canvas" width="600" height="200"></canvas>
+<canvas id="graph-canvas" width="600" height="200"></canvas> 
+
+
 
 <div id="total-result">
   <div id="total-profit">Win / Loss:<br>0.00</div>
@@ -114,7 +129,7 @@
 </div>
 
 
-<button class="admin-button" onclick="toggleAdmin()">Admin</button>
+<button class="admin-button" id="admin-btn" onclick="toggleAdmin()">Admin</button>
 
 <div class="admin-section" id="admin-panel">
   <h3>Admin Panel</h3>
@@ -125,56 +140,70 @@
     <h4>Add / Edit Tip</h4>
     <form id="tip-form">
       <input type="hidden" id="tip-id">
-      <input required id="date" type="date" placeholder="Event Date">
+
+      <label for="date">Date:</label>
+      <div style="display: flex; align-items: center; gap: 5px; margin-bottom: 10px;">
+        <button type="button" onclick="changeDate(-1)" title="Previous day">&#9664;</button>
+        <input required id="date" type="date" placeholder="Event Date" style="width: 150px;">
+        <button type="button" onclick="changeDate(1)" title="Next day">&#9654;</button>
+      </div>
+
       <input required id="startTime" type="time" placeholder="Start Time">
+
       <label>Sport:</label>
-<select id="sport-select" onchange="updateSportInput(this.value)">
-  <option value="">(Select Sport)</option>
-  <option>Soccer</option>
-  <option>Tennis</option>
-  <option>Basketball</option>
-  <option>Ice Hockey</option>
-  <option>Snooker</option>
-  <option value="__custom__">Other (type manually)</option>
-</select>
-<input required id="sport" placeholder="Sport" style="margin-top: 5px;">
+      <select id="sport-select" onchange="updateSportInput(this.value)">
+        <option value="">(Select Sport)</option>
+        <option selected>Soccer</option>
+        <option>Tennis</option>
+        <option>Basketball</option>
+        <option>Ice Hockey</option>
+        <option>Snooker</option>
+        <option value="__custom__">Other (type manually)</option>
+      </select>
+      <input required id="sport" placeholder="Sport" style="margin-top: 5px;">
+
       <input required id="game" placeholder="Game">
       <input required id="bet" placeholder="Bet">
       <input required id="odds" type="number" step="0.001" placeholder="Odds">
       <input required id="stake" type="number" step="0.01" placeholder="Stake">
+
       <label>Bookmaker:</label>
-<select id="company-select" onchange="updateCompanyInput(this.value)">
-  <option value="">(Select Bookmaker)</option>
-  <option>888sport</option>
-  <option>Bet-at-home</option>
-  <option>Bet365</option>
-  <option>Betsson</option>
-  <option>Betway</option>
-  <option>Coolbet</option>
-  <option>Epicbet</option>
-  <option>Ninja Casino</option>
-  <option>Olybet</option>
-  <option>Optibet</option>
-  <option>PokerStars</option>
-  <option>Pinnacle</option>
-  <option>Unibet</option>
-  <option>Wildz</option>
-  <option>William Hill</option>
-  
-  <option value="__custom__">Other (type manually)</option>
-</select>
-<input required id="company" placeholder="Bookmaker" style="margin-top: 5px;">
-<input id="deeplink" placeholder="Deeplink URL (optional)" style="width: 100%; margin-top: 5px;" />
+      <select id="company-select" onchange="updateCompanyInput(this.value)">
+        <option value="">(Select Bookmaker)</option>
+        <option>888sport</option>
+        <option>Bet-at-home</option>
+        <option>Bet365</option>
+        <option>Betsson</option>
+        <option>Betway</option>
+        <option>Coolbet</option>
+        <option>Epicbet</option>
+        <option>Ninja Casino</option>
+        <option>Olybet</option>
+        <option>Optibet</option>
+        <option>PokerStars</option>
+        <option>Pinnacle</option>
+        <option>Tonybet</option>
+        <option>Unibet</option>
+        <option>Wildz</option>
+        <option>William Hill</option>
+        <option value="__custom__">Other (type manually)</option>
+      </select>
+      <input required id="company" placeholder="Bookmaker" style="margin-top: 5px;">
+
+      <input id="deeplink" placeholder="Deeplink URL (optional)" style="width: 100%; margin-top: 5px;" />
+
       <select id="result">
         <option value="">(Result)</option>
         <option>Win</option>
         <option>Half Win</option>
         <option>Push</option>
+        <option>Void</option>
         <option>Half Lose</option>
         <option>Loss</option>
       </select>
+
       <button type="submit">Save</button>
-    </form>
+    </form>	
 
     <h4>Import CSV</h4>
     <input type="file" id="csv-file" accept=".csv">
@@ -195,17 +224,77 @@
 </div>
 
 <script>
+  function changeDate(days) {
+    const dateInput = document.getElementById("date");
+    let currentDate = new Date(dateInput.value);
+    if (isNaN(currentDate)) {
+      currentDate = new Date(); // sätt till idag om inget datum finns
+    }
+    currentDate.setDate(currentDate.getDate() + days);
+    const yyyy = currentDate.getFullYear();
+    const mm = String(currentDate.getMonth() + 1).padStart(2, '0');
+    const dd = String(currentDate.getDate()).padStart(2, '0');
+    dateInput.value = `${yyyy}-${mm}-${dd}`;
+  }
+
+  function updateSportInput(value) {
+    const input = document.getElementById("sport");
+    if (value && value !== "__custom__") {
+      input.value = value;
+      input.disabled = true;
+    } else {
+      input.value = "";
+      input.disabled = false;
+      input.focus();
+    }
+  }
+
+  function updateCompanyInput(value) {
+    const input = document.getElementById("company");
+    if (value && value !== "__custom__") {
+      input.value = value;
+      input.disabled = true;
+    } else {
+      input.value = "";
+      input.disabled = false;
+      input.focus();
+    }
+  }
+
+  // Sätt dagens datum och förvalt sport "Soccer" vid sidladdning
+window.addEventListener('DOMContentLoaded', () => {
+  // Datum
+  const dateInput = document.getElementById('date');
+  if (dateInput) {
+    dateInput.value = new Date().toISOString().split("T")[0];
+  }
+
+  // Sport
+  const sportSelect = document.getElementById('sport-select');
+  if (sportSelect) {
+    sportSelect.value = "Soccer";
+    updateSportInput("Soccer");
+  }
+});
+
+</script>
+
+
+<script>
 const affiliateLinks = {
-  "Bet365": "https://www.bet365.com",
-  "Pinnacle": "https://www.pinnacle.bet",
-  "PokerStars": "https://www.pokerstars.com",
-  "Coolbet": "https://www.coolbet.com",
-  "Unibet": "https://www.unibet.com",
-  "Betsson": "https://www.betsson.com",
-  "William Hill": "https://sports.williamhill.com/betting/en-gb",
-  "Betway": "https://www.betway.com",
-  "Ninja Casino": "https://www.ninjacasino.com",
- 
+ //  "Bet365": "https://www.bet365.com",
+ //  "Pinnacle": "https://www.pinnacle.bet",
+ //  "PokerStars": "https://www.pokerstars.com",
+ //  "Coolbet": "https://www.coolbet.com",
+ //  "Unibet": "https://www.unibet.com",
+ //  "Betsson": "https://www.betsson.com",
+ //  "William Hill": "https://sports.williamhill.com/betting/en-gb",
+ //  "Betway": "https://www.betway.com",
+ //  "Ninja Casino": "https://www.ninjacasino.com",
+ //  "Wildz": "https://www.wildz.com", 
+ //  "Epicbet": "https://www.epicbet.com",
+ //  "Tonybet": "https://www.tonybet.com", 
+
 };
 
 let tips = [];
@@ -252,14 +341,16 @@ function renderTips() {
 
   let totalProfit = 0, totalStake = 0, cumulative = [];
 
-  sorted.slice().reverse().forEach(tip => {
-    const winLoss = calculateWinLoss(tip);
-    if (winLoss !== null) {
-      totalProfit += winLoss;
+sorted.slice().reverse().forEach(tip => {
+  const winLoss = calculateWinLoss(tip);
+  if (winLoss !== null) {
+    totalProfit += winLoss;
+    if (tip.result.toLowerCase() !== 'void') {
       totalStake += parseFloat(tip.stake);
-      cumulative.push(totalProfit);
     }
-  });
+    cumulative.push(totalProfit);
+  }
+});
 
   function createRow(tip, isAdmin = false) {
     const tr = document.createElement("tr");
@@ -307,6 +398,7 @@ function renderTips() {
   gameCell = title;
 }
 
+
     let bookmakerUrl = affiliateLinks[tip.company] || "";
     if (bookmakerUrl && affiliateCodes[tip.company]) {
       const sep = bookmakerUrl.includes("?") ? "&" : "?";
@@ -315,6 +407,8 @@ function renderTips() {
     const bookmakerCell = bookmakerUrl
       ? `<a href="${bookmakerUrl}" target="_blank" rel="noopener noreferrer">${tip.company}</a>`
       : tip.company;
+
+
 
     tr.innerHTML = `
       <td>${tip.date}</td>
@@ -446,6 +540,7 @@ function calculateWinLoss(tip) {
     case "Win": return s * (o - 1);
     case "Half Win": return 0.5 * s * (o - 1);
     case "Push": return 0;
+    case "Void": return 0;
     case "Half Lose": return -0.5 * s;
     case "Loss": return -s;
     default: return null;
@@ -568,58 +663,91 @@ function parseCSVLine(line) {
   });
 }
 
-function importFromServer() {
-  fetch('https://artiesoft.com/flintstone/tips.csv')
-    .then(response => response.text())
-    .then(text => {
-      const lines = text.trim().split("\n");
-      const headers = parseCSVLine(lines[0]);
+function getTimestamp() {
+  const now = new Date();
+  const pad = (n) => n.toString().padStart(2, '0');
+  return (
+    now.getFullYear() +
+    pad(now.getMonth() + 1) +
+    pad(now.getDate()) +
+    '_' +
+    pad(now.getHours()) +
+    pad(now.getMinutes()) +
+    pad(now.getSeconds()) +
+    '_' +
+    now.getMilliseconds()
+  );
+}
 
-      tips = JSON.parse(localStorage.getItem("tips") || "[]");
-      const localMap = new Map(tips.map(t => [t.id, t]));
+async function importFromServer() {
+  try {
+    // Hämta tips.csv från samma site, med cache-busting
+    const url = `tips.csv?ts=${Date.now()}`;
 
-      let newCount = 0;
-      let updatedCount = 0;
+    const response = await fetch(url, {
+      method: 'GET',
+      cache: 'no-store', // Bypass browser cache
+      headers: {
+        'Cache-Control': 'no-cache', // Ask server not to use cache
+        'Pragma': 'no-cache'         // Older HTTP/1.0 cache bypass
+      }
+    });
 
-      lines.slice(1).forEach(line => {
-        const values = parseCSVLine(line);
-        const obj = {};
-        headers.forEach((h, i) => {
-          obj[h] = values[i];
-        });
+    if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
 
-        obj.id = obj.id || (Date.now() + Math.random()).toString();
+    const text = await response.text();
+    const lines = text.trim().split(/\r?\n/);
+    const headers = parseCSVLine(lines[0] || '');
 
-        if (!localMap.has(obj.id)) {
-          tips.push(obj);
-          localMap.set(obj.id, obj);
-          newCount++;
-        } else {
-          const localTip = localMap.get(obj.id);
-          let changed = false;
-          for (const key of headers) {
-            if (localTip[key] !== obj[key]) {
-              localTip[key] = obj[key];
-              changed = true;
-            }
-          }
-          if (changed) updatedCount++;
-        }
+    tips = JSON.parse(localStorage.getItem("tips") || "[]");
+    const localMap = new Map(tips.map(t => [t.id, t]));
+
+    let newCount = 0;
+    let updatedCount = 0;
+
+    for (const line of lines.slice(1)) {
+      if (!line) continue;
+      const values = parseCSVLine(line);
+      const obj = {};
+      headers.forEach((h, i) => {
+        obj[h] = values[i] ?? '';
       });
 
-      saveTips();
+      obj.id = obj.id || (crypto.randomUUID?.() || (Date.now() + Math.random()).toString());
 
-      if (newCount > 0) {
-        renderTips();
-        alert(`Imported ${newCount} new tip${newCount > 1 ? 's' : ''} from server.`);
+      if (!localMap.has(obj.id)) {
+        tips.push(obj);
+        localMap.set(obj.id, obj);
+        newCount++;
       } else {
-        alert("No new tips found on server.");
+        const localTip = localMap.get(obj.id);
+        let changed = false;
+        for (const key of headers) {
+          if (localTip[key] !== obj[key]) {
+            localTip[key] = obj[key];
+            changed = true;
+          }
+        }
+        if (changed) updatedCount++;
       }
-    })
-    .catch(err => {
-      alert("Could not import from server: " + err.message);
-    });
+    }
+
+    saveTips();
+
+    if (newCount || updatedCount) {
+      renderTips();
+      alert(`Imported ${newCount} new and ${updatedCount} updated tip${(newCount + updatedCount) !== 1 ? 's' : ''}.`);
+    } else {
+      alert("No new tips found on server.");
+    }
+
+  } catch (err) {
+    alert("Could not import from server: " + err.message);
+  }
 }
+
+
+
 
 
 function importCSV() {
@@ -659,7 +787,7 @@ function exportCSV() {
     return;
   }
 
-  // Lägg till startTime och deeplink i headern
+  // Header och rader
   const headers = ["id", "date", "startTime", "sport", "game", "bet", "odds", "stake", "company", "result", "deeplink"];
   const csvRows = [headers.join(",")];
 
@@ -677,7 +805,7 @@ function exportCSV() {
       tip.result,
       tip.deeplink || ""
     ];
-    // Om något fält innehåller kommatecken eller citationstecken, omslut med " och escapa " med dubbel ""
+
     const escapedRow = row.map(field => {
       if (typeof field === "string" && (field.includes(",") || field.includes('"'))) {
         return `"${field.replace(/"/g, '""')}"`;
@@ -688,36 +816,37 @@ function exportCSV() {
     csvRows.push(escapedRow.join(","));
   });
 
-
-  // === Spara lokalt ===
   const csvData = csvRows.join("\n");
   const blob = new Blob([csvData], {type: 'text/csv'});
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = "tips-export.csv";
-  a.click();
-  URL.revokeObjectURL(url);
 
-  // === Skicka till server som tips.csv ===
-  const formData = new FormData();
-  formData.append("file", blob, "tips.csv");
+  // Funktion för att trigga "save as" dialog med angivet filnamn
+  function saveBlob(blob, filename) {
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = filename;
+    a.style.display = 'none';
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(() => {
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }, 100);
+  }
 
-  fetch("/api/upload-csv", {
-    method: "POST",
-    body: formData
-  })
-  .then(response => {
-    if (response.ok) {
-      console.log("CSV skickades till servern som tips.csv!");
-    } else {
-      console.error("Fel vid serverexport:", response.statusText);
-    }
-  })
-  .catch(error => {
-    alert("🚫 Kunde inte skicka CSV till servern.\nKontrollera din uppkoppling eller serveradress.");
-    console.error("Nätverksfel vid serverexport:", error);
-  });
+  // Skapa unikt filnamn med timestamp: tips-export-YYYYMMDD-HHMMSS.csv
+  const now = new Date();
+  const pad = (n) => n.toString().padStart(2, '0');
+  const timestamp = `${now.getFullYear()}${pad(now.getMonth()+1)}${pad(now.getDate())}-${pad(now.getHours())}${pad(now.getMinutes())}${pad(now.getSeconds())}`;
+  const uniqueFilename = `tips-export-${timestamp}.csv`;
+
+  // Spara först unikt filnamn (laddas ner automatiskt utan att fråga)
+  saveBlob(blob, uniqueFilename);
+
+  // Efter en liten fördröjning, fråga användaren var tips.csv ska sparas
+  setTimeout(() => {
+    saveBlob(blob, "tips.csv");
+  }, 500);
 }
 
 
@@ -741,6 +870,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const today = new Date().toISOString().split("T")[0];
     dateInput.value = today;
   }
+  
+  const sportSelect = document.getElementById("sport-select");
+  if (sportSelect) {
+    sportSelect.value = "Soccer";
+    updateSportInput("Soccer");
+  }
 });
 
 function updateCompanyInput(value) {
@@ -755,8 +890,8 @@ function updateCompanyInput(value) {
   }
 }
 
-
 renderTips();
+
 
 
 
@@ -804,37 +939,57 @@ async function importFromServer() {
 // Kör import automatiskt vid sidladdning
 window.addEventListener('DOMContentLoaded', importFromServer);
 
+window.addEventListener('DOMContentLoaded', () => {
+  // Kolla om sidan öppnas lokalt
+  const adminBtn = document.getElementById('admin-btn');
+  if (window.location.protocol !== 'file:') {
+    // Dölj knappen om inte lokalt
+    adminBtn.style.display = 'none';
+  }
+});
+
 </script>
 
 
-<!-- Contact info -->
-<div style="text-align: left; font-size: 13px; color: #777; margin-top: 25px;">
-  Contact: info [at] bestvaluebets [dot] com
-</div>
+ 
+<div style="text-align: left; font-size: 16px; color: #000000; margin-top: 32px;">
+  Contact: info [at] bestvaluebets.com
+</div> 
+
+
+<!--   <div style="display: flex; align-items: center; gap: 20px; margin-top:20px;">
+   BookieRev-loggan till höger 
+  <a href="https://bookierev.com" target="_blank">
+    <img src="bookierev-logo.png" alt="BookieRev Logo" class="responsive-logo">
+  </a>
+</div>  -->
+
 
 <!-- Disclaimer box -->
 <div class="disclaimer-box">
-  <h3 style="text-align: left; color: #333; font-size: 12px; ">Disclaimer:</h3>
-  <p style="text-align: left; color: #555; font-size: 11px; line-height: 1.6;">
+  <h3 style="text-align: left; color: #333; font-size: 15px; ">Disclaimer:</h3>
+  <p style="text-align: left; color: #555; font-size: 14px; line-height: 1.6;">
     Past performance is not a guarantee of future results. We do not provide betting recommendations or advice. We simply share the bets we place ourselves and do not accept responsibility for any potential losses incurred by others. Even well-considered betting carries risk. Rational gambling can still lead to addiction, financial loss, wasted time, and damage to self-esteem.
   </p>
-  <p style="text-align: left; color: #555; font-size: 11px; line-height: 1.6;">
+  <p style="text-align: left; color: #555; font-size: 14px; line-height: 1.6;">
     Always consult a professional regarding the tax implications of any betting winnings. Only bet with amounts you can comfortably afford to lose.
   </p>
-  <p style="text-align: left; color: #555; font-size: 11px; line-height: 1.6;">
+  <p style="text-align: left; color: #555; font-size: 14px; line-height: 1.6;">
     BestValueBets.com is an independent affiliate website. We may receive a commission when users click on links and sign up or place bets on third-party platforms. We do not operate or offer gambling services ourselves. Our content is intended for informational purposes only and is strictly for users aged 18 and over.
   </p>
-  <p style="text-align: left; color: #555; font-size: 11px; line-height: 1.6;">
+  <p style="text-align: left; color: #555; font-size: 14px; line-height: 1.6;">
     This website uses cookies for analytics and affiliate tracking. By continuing to browse, you accept our use of cookies.
   </p>
-  <p style="text-align: left; color: #555; font-size: 11px; line-height: 1.6;">
+  <p style="text-align: left; color: #555; font-size: 14px; line-height: 1.6;">
     BestValueBets.com is not directed at users in Finland or jurisdictions where online gambling promotion is prohibited. 
   </p>
 </div>
 
+<br>
 
+<a href="https://bookierev.com" target="_blank">
+  <img src="bookierev-logo.png" alt="BookieRev.com" style="width:500px; height:auto;">
+</a>
 
 </body>
 </html>
-
-
