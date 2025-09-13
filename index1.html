@@ -101,18 +101,17 @@
 </head>
 <body>
 
-
 <div style="display: flex; align-items: center; gap: 12px;">
   <img src="logo.png" alt="BestValueBets Logo" class="responsive-logo">
 </div>  
 
 <canvas id="graph-canvas" width="600" height="200"></canvas> 
 
-<br>
+
 
 <div id="total-result">
-  <div id="total-profit">Win / Loss: 0.00</div>
-  <div id="roi">Return on investment (ROI): 0%</div>
+  <div id="total-profit">Win / Loss:<br>0.00</div>
+  <div id="roi">Return on investment (ROI):<br>0%</div>
 </div>
 
 <table id="home-table">
@@ -444,8 +443,8 @@ sorted.slice().reverse().forEach(tip => {
   localStorage.setItem("seenTips", JSON.stringify([...new Set([...seenTips, ...newTipsIds])]));
 
   const roi = totalStake ? (totalProfit / totalStake) * 100 : 0;
-  document.getElementById("total-profit").innerHTML = `Win / Loss: ${totalProfit.toFixed(2)}`;
-  document.getElementById("roi").innerHTML = `Return on investment (ROI): ${roi.toFixed(1)}%`;
+  document.getElementById("total-profit").innerHTML = `Win / Loss:<br>${totalProfit.toFixed(2)}`;
+  document.getElementById("roi").innerHTML = `Return on investment (ROI):<br>${roi.toFixed(1)}%`;
 
   drawGraph(cumulative);
 }
@@ -682,9 +681,8 @@ function getTimestamp() {
 
 async function importFromServer() {
   try {
-    // Hämta tips.csv från Github, med cache-busting
-   const url = `/.netlify/functions/fetchTips?ts=${Date.now()}`;   
-
+    // Hämta tips.csv från samma site, med cache-busting
+    const url = `tips.csv?ts=${Date.now()}`;
 
     const response = await fetch(url, {
       method: 'GET',
@@ -953,6 +951,12 @@ window.addEventListener('DOMContentLoaded', () => {
 </script>
 
 
+ 
+<div style="text-align: left; font-size: 16px; color: #000000; margin-top: 32px;">
+  Contact: info [at] bestvaluebets.com
+</div> 
+
+
 <!--   <div style="display: flex; align-items: center; gap: 20px; margin-top:20px;">
    BookieRev-loggan till höger 
   <a href="https://bookierev.com" target="_blank">
@@ -982,6 +986,10 @@ window.addEventListener('DOMContentLoaded', () => {
 </div>
 
 <br>
+
+<a href="https://bookierev.com" target="_blank">
+  <img src="bookierev-logo.png" alt="BookieRev.com" style="width:500px; height:auto;">
+</a>
 
 <footer>
   <div style="display: flex; align-items: center; gap: 15px;">
