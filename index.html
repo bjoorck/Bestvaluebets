@@ -303,7 +303,7 @@ let tips = [];
 const affiliateCodes = {
   // "Pinnacle": "btag=12345_67890",  // <-- put your real affiliate code here
   // add more bookmakers if you want later, e.g.
-  // "Bet365": "affcode=abc123"
+   "Tonybet": "affcode=abc123"
 };
 
 function saveTips() {
@@ -682,17 +682,14 @@ function getTimestamp() {
 
 async function importFromServer() {
   try {
-    // Hämta tips.csv från Github, med cache-busting
-   const url = `https://raw.githubusercontent.com/bjoorck/Bestvaluebets/main/tips.csv?ts=${Date.now()}`;   
-
+   // Proxy-URL via AllOrigins för att komma runt CORS
+    const url = "https://api.allorigins.win/raw?url=" + encodeURIComponent(
+      "https://raw.githubusercontent.com/bjoorck/Bestvaluebets/data/tips.csv"
+    );
 
     const response = await fetch(url, {
       method: 'GET',
-      cache: 'no-store', // Bypass browser cache
-      headers: {
-        'Cache-Control': 'no-cache', // Ask server not to use cache
-        'Pragma': 'no-cache'         // Older HTTP/1.0 cache bypass
-      }
+      cache: 'no-store'
     });
 
     if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
@@ -737,11 +734,8 @@ async function importFromServer() {
     saveTips();
 
     if (newCount || updatedCount) {
-      renderTips();
-      alert(`Imported ${newCount} new and ${updatedCount} updated tip${(newCount + updatedCount) !== 1 ? 's' : ''}.`);
-    } else {
-      alert("No new tips found on server.");
-    }
+  renderTips();
+   }
 
   } catch (err) {
     alert("Could not import from server: " + err.message);
@@ -867,18 +861,29 @@ function updateSportInput(value) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  // --- Sätt datumfältet ---
   const dateInput = document.getElementById("date");
   if (dateInput) {
     const today = new Date().toISOString().split("T")[0];
     dateInput.value = today;
   }
-  
+
+  // --- Sätt sportfältet ---
   const sportSelect = document.getElementById("sport-select");
   if (sportSelect) {
     sportSelect.value = "Soccer";
     updateSportInput("Soccer");
   }
+
+  // --- Ladda tips från localStorage ---
+  tips = JSON.parse(localStorage.getItem("tips") || "[]");
+  renderTips();        // visa alltid det som finns lokalt
+  showLastUpdated();   // visa senaste uppdatering
+
+  // --- Hämta nya tips i bakgrunden ---
+  importFromServer();
 });
+
 
 function updateCompanyInput(value) {
   const input = document.getElementById("company");
@@ -909,34 +914,7 @@ function parseCSV(csvText) {
 }
 
 
-async function importFromServer() {
-  try {
-    const response = await fetch('tips.csv');
-    if (!response.ok) throw new Error('Failed to fetch CSV');
 
-    const csvText = await response.text();
-    const lines = csvText.trim().split('\n');
-    const headers = parseCSVLine(lines[0]);
-
-    tips = [];
-
-    lines.slice(1).forEach(line => {
-      const values = parseCSVLine(line);
-      const obj = {};
-      headers.forEach((h, i) => {
-        obj[h] = values[i];
-      });
-      obj.id = obj.id || (Date.now() + Math.random()).toString();
-      tips.push(obj);
-    });
-
-    saveTips();
-    renderTips();
-  } catch (error) {
-    console.error('Import failed:', error);
-    alert('Failed to load tips from server.');
-  }
-}
 
 // Kör import automatiskt vid sidladdning
 window.addEventListener('DOMContentLoaded', importFromServer);
@@ -988,8 +966,8 @@ window.addEventListener('DOMContentLoaded', () => {
     <p style="margin: 0;">© 2025 Bestvaluebets.com. All rights reserved.</p>
     <nav>
       <ul style="list-style: none; padding: 0; margin: 0; display: flex; gap: 20px;">
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href='/contact'>Contact</a></li>
+        <li><a href='/disclaimer'>Disclaimer</a></li>
       </ul>
     </nav>
   </div>
