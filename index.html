@@ -683,7 +683,7 @@ function getTimestamp() {
 async function importFromServer() {
   try {
     // Hämta tips.csv från Github, med cache-busting
-   const url = `/.netlify/functions/fetchTips?ts=${Date.now()}`;   
+   const url = `https://raw.githubusercontent.com/bjoorck/Bestvaluebets/main/tips.csv?ts=${Date.now()}`;   
 
 
     const response = await fetch(url, {
