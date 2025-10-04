@@ -1,4 +1,5 @@
 id,date,startTime,sport,game,bet,odds,stake,company,result,deeplink
+1757836773012,2025-09-14,13:00,Ice Hockey,Frölunda HC – Djurgårdens IF / Sweden Women SDHL,AH1 (−1.5),1.78,1,Betsson,Win,
 1756928260010,2025-09-10,20:00,Soccer,KuPS – FF Jaro / Finland - Suomen Cup,3-way hcp 1(0:1),2.33,5,Ninja Casino,Win,
 1757422625638,2025-09-09,21:45,Soccer,France – Iceland Europe / World Cup Europe Qual,Iceland Under 2.5 - shot on target,1.7,5,Epicbet,Win,
 1757422680536,2025-09-09,21:45,Soccer,France – Iceland Europe / World Cup Europe Qual,Iceland Under 1.5 - shot on target,2.95,1,Epicbet,Loss,
@@ -127,9 +128,9 @@ id,date,startTime,sport,game,bet,odds,stake,company,result,deeplink
 1754420717495.755,2025-07-24,,Soccer,Europa League Qual: Levski Sofia – S.C. Braga  ,1 - corners,3.3,5,Unibet,Win,
 1754420717495.7395,2025-07-24,,Soccer,Conference League Qual: Paide Linnameeskond – AIK ,AH2(−1.75),2.05,10,Unibet,Half Win,
 1754420717495.5576,2025-07-24,,Soccer,UEFA Europa Conference League Qual: Ilves – Az Alkmaar ,Ilves 4 Or More Corners,2.25,8,PokerStars,Win,
-1754420717495.6326,2025-07-23,22:00,Soccer,UEFA Champions League Qual: Brann – FC Red Bull Salzburg,Over 3.5 - shot on target 1st half,2.14,8,Coolbet,Win,
+1754420717495.6326,2025-07-23,22:00,Soccer,Brann – FC Red Bull Salzburg / UEFA Champions League Qual,Over 3.5 - shot on target 1st half,2.14,8,Coolbet,Win,
+1754420717495.101,2025-07-23,22:00,Soccer,Silkeborg - KA Akureyri / UEFA Europa Conference League Qual,1 - corners,1.22,12,William Hill,Loss,
+1754420717494.5278,2025-07-23,21:00,Soccer,Deportivo Pereira – Atletico Nacional / Colombia Primera A,AH2(+0.5) - corners 	,1.83,10,Bet365,Loss,
 1754420717494.8972,2025-07-23,,Soccer,Copa Sudamericana: Vasco da Gama-RJ – Independiente del Valle ,Under 7.5 - shot on target Vasco da Gama-RJ,1.9,8,Unibet,Win,
-1754420717494.5278,2025-07-23,,Soccer,Colombia Primera A: Deportivo Pereira – Atletico Nacional ,AH2(+0.5) - corners 	,1.83,10,Bet365,Loss,
 1754420717494.9487,2025-07-23,,Tennis, ATP Washington: Ben Shelton – Mackenzie McDonald,Over 1.5 - break 1st set,2.5,8,Bet365,Loss,
 1754420717495.1765,2025-07-23,,Baseball,STL Cardinals – COL Rockies,Under 20.5 - hits (OT incl),1.95,12,Betsson,Win,
-1754420717495.101,2025-07-23,,Soccer,UEFA Europa Conference League Qual: Silkeborg - KA Akureyri,1 - corners,1.22,12,William Hill,Loss,
