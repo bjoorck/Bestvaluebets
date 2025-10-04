@@ -1,5 +1,6 @@
 id,date,startTime,sport,game,bet,odds,stake,company,result,deeplink
-1759595388553,2025-10-05,14:40,Tennis,T Griekspoor – Sinner / ATP Shanghai,1st set AH2(−2.5),2,2,PokerStars,,https://eur.pokerstars.com/sports/tennis/2/atp-shanghai-2025/12763008/t-griekspoor-v-sinner/34808849/
+1759595388553,2025-10-05,14:40,Tennis,T Griekspoor – Sinner / ATP Shanghai,1st set AH2(−2.5),2.1,3,PokerStars,,https://eur.pokerstars.com/sports/tennis/2/atp-shanghai-2025/12763008/t-griekspoor-v-sinner/34808849/
+1759607914884,2025-10-05,09:00,Tennis,"Preston, T – Akita / S ITF Women - ITF W35 Darwin ",1,1.5,3,Betsson,,https://www.betsson.com/en/sportsbook/tennis/itf-women/itf-w35-darwin/preston-t-akita-s?eventId=f-VjZmqLhq0EKIRVHs8c3_ig&eti=0
 1759174075482,2025-10-02,19:30,Ice Hockey,Lorenskog IK – Stavanger Oilers / Norway - EHL ,2,1.4,1,Epicbet,Win,
 1759344733925,2025-10-02,10:00,Tennis,Mackenzie McDonald – Quentin Halys / ATP Shanghai ,1st set 6:4 ,5.6,2,Unibet,Loss,
 1758995729787,2025-09-28,12:00,Tennis,Carlos Alcaraz – Brandon Nakashima / ATP Tokyo ,1st set 6:4,5,3,Epicbet,Loss,
@@ -18,4 +19,3 @@ id,date,startTime,sport,game,bet,odds,stake,company,result,deeplink
 1757837218596,2025-09-15,15:00,Soccer,SJK Akatemia/2 – Jakobstads Bollklubb / Finland - Kakkonen,2,2.35,2,Tonybet,Win,
 1757793488790,2025-09-14,19:00,Soccer,VJS – Myllykosken Pallo -47 / Finland - Kakkonen,Over 4.5,2.07,2,Tonybet,Win,
 1757654634522,2025-09-14,18:30,Soccer,GrIFK - PuiU / Finland - Kakkonen,x2,2.23,8,Unibet,Win,
-1757835170002,2025-09-14,15:30,Soccer,SK Brann Women – Honefoss BK Women / Norway Toppserien W,Both to score,2.92,4,Epicbet,Loss,
