@@ -1,8 +1,5 @@
 id,date,startTime,sport,game,bet,odds,stake,company,result,deeplink
-<<<<<<< Updated upstream
 1759676807989,2025-10-11,00:00,Soccer,Spain – Georgia / World Cup Europe Qualification,Over 2.5,1.49,4,Olybet,,https://www.olybet.eu/sports/pre-match/event-view/Soccer/World/18277589/world-cup-europe-qualification/28024832/spain-georgia/search
-=======
->>>>>>> Stashed changes
 1759649349155,2025-10-05,16:00,Soccer,Aston Villa FC – Burnley / England - Premier League,Under 4.5 - offsides,1.95,3,Ninja Casino,Loss,https://www.ninjacasino.com/sports-betting#/sport/66/category/497/championship/2936/event/13014777
 1759595388553,2025-10-05,14:40,Tennis,T Griekspoor – Sinner / ATP Shanghai,1st set AH2(−2.5),2.0,3,PokerStars,Loss,https://eur.pokerstars.com/sports/tennis/2/atp-shanghai-2025/12763008/t-griekspoor-v-sinner/34808849/
 1759607914884,2025-10-05,09:00,Tennis,"Preston, T – Akita S / ITF Women - ITF W35 Darwin ",1,1.5,3,Betsson,Win,https://www.betsson.com/en/sportsbook/tennis/itf-women/itf-w35-darwin/preston-t-akita-s?eventId=f-VjZmqLhq0EKIRVHs8c3_ig&eti=0
@@ -21,9 +18,4 @@ id,date,startTime,sport,game,bet,odds,stake,company,result,deeplink
 1758344772058,2025-09-20,17:00,Ice Hockey,JYP – Pelicans / Finland - Liiga,3rd period - Over 2.5,3.4,4,Unibet,Loss,
 1757962574443,2025-09-18,19:30,Ice Hockey,Stjernen – Lørenskog / Norway - EHL,1,1.87,2,Betsson,Win,
 1758110290344,2025-09-18,18:30,Soccer,JPS – FCV / Finland - Kakkonen,3-way hcp 2(2:0),2.4,6,Betway,Loss,
-<<<<<<< Updated upstream
 1757837218596,2025-09-15,15:00,Soccer,SJK Akatemia/2 – Jakobstads Bollklubb / Finland - Kakkonen,2,2.35,2,Tonybet,Win,
-=======
-1757837218596,2025-09-15,15:00,Soccer,SJK Akatemia/2 – Jakobstads Bollklubb / Finland - Kakkonen,2,2.35,2,Tonybet,Win,
-1757793488790,2025-09-14,19:00,Soccer,VJS – Myllykosken Pallo -47 / Finland - Kakkonen,Over 4.5,2.07,2,Tonybet,Win,
->>>>>>> Stashed changes
