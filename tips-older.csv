@@ -1,5 +1,8 @@
 id,date,startTime,sport,game,bet,odds,stake,company,result,deeplink
+<<<<<<< Updated upstream
 1757793488790,2025-09-14,19:00,Soccer,VJS – Myllykosken Pallo -47 / Finland - Kakkonen,Over 4.5,2.07,2,Tonybet,Win,
+=======
+>>>>>>> Stashed changes
 1757654634522,2025-09-14,18:30,Soccer,GrIFK - PuiU / Finland - Kakkonen,x2,2.23,8,Unibet,Win,
 1757835170002,2025-09-14,15:30,Soccer,SK Brann Women – Honefoss BK Women / Norway Toppserien W,Both to score,2.92,4,Epicbet,Loss,
 1757836773012,2025-09-14,13:00,Ice Hockey,Frölunda HC – Djurgårdens IF / Sweden Women SDHL,AH1 (−1.5),1.78,1,Betsson,Win,
