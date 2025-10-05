@@ -7,66 +7,162 @@
 <link rel="icon" href="favicon.png" type="image/x-icon">
 <style>
 body { font-family: Arial, sans-serif; margin: 20px; }
+
+.responsive-logo { height: 180px; width: auto; max-width: 100%; display:block; margin:0 auto; }
+
+/* Intro + Graph wrapper */
+.intro-graph-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 20px auto;
+  gap: 20px;
+}
+
+.intro-box {
+  max-width: 580px;
+}
+
+.intro-text {
+  margin-top: 2px;  /* smaller gap (try 0–5px) */
+  font-size: 16px;
+  color: #333;
+  line-height: 1.4; /* better line spacing */
+}
+
+.graph-container {
+  padding: 10px;
+  max-width: 580px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.graph-container img {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  display:block;
+}
+
+@media (min-width: 1001px) {
+  .intro-graph-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .intro-box, .graph-container {
+    flex: 1;
+    max-width: 580px;
+  }
+
+  .intro-box { text-align: left; }
+}
+
+/* Table & cards */
 table { width: 100%; border-collapse: collapse; margin-top: 20px; }
 th, td { border: 1px solid #ccc; padding: 6px; text-align: left; white-space: nowrap; }
 th { background-color: #f0f0f0; }
 .win, .half-win { background-color: #c6f6c6; }
 .loss, .half-lose { background-color: #f6c6c6; }
 .push, .void { background-color: #eee; }
-.responsive-logo { height: 180px; width: auto; max-width: 100%; }
-.disclaimer-box { background-color: #f3f3f3; padding: 20px; margin-top: 40px; border-radius: 8px; box-sizing: border-box; }
-.older-toggle { margin-top: 10px; opacity: 0; transition: opacity 0.8s ease-in; }
-.older-toggle.visible { opacity: 1; }
-.graph-container { padding: 10px; max-width: 600px; margin: 20px 0; background: #fff; text-align: center; }
-.graph-container img { width: 100%; border-radius: 6px; border: 1px solid #ccc; display:block; }
-.rev-network-box { background-color: #f9f9f9; padding: 20px; margin-top: 40px; border-radius: 8px; border: 1px solid #ddd; width: 100%; box-sizing: border-box; }
-.rev-network-inner h3 { margin-top: 0; font-size: 20px; color: #333; }
-.rev-network-inner p { font-size: 16px; color: #555; margin-bottom: 10px; }
+
+/* Rev Network */
+.rev-network-box { background-color: #f9f9f9; padding: 24px; margin-top: 40px; border-radius: 8px; border: 1px solid #ddd; width: 100%; box-sizing: border-box; }
+.rev-network-inner h3 { margin-top: 0; font-size: 24px; color: #333; }
+.rev-network-inner p { font-size: 20px; color: #555; margin-bottom: 10px; }
 .rev-network-inner ul { list-style: disc; padding-left: 20px; margin: 0; }
-.rev-network-inner ul li { font-size: 15px; color: #555; margin-bottom: 6px; }
+.rev-network-inner ul li { font-size: 20px; color: #555; margin-bottom: 6px; }
 .rev-network-inner ul li a { color: #0077cc; text-decoration: none; }
 .rev-network-inner ul li a:hover { text-decoration: underline; }
 
-@media (max-width: 600px) {
+/* Disclaimer */
+.disclaimer-box { background-color: #f3f3f3; padding: 20px; margin-top: 40px; border-radius: 8px; box-sizing: border-box; }
+
+.older-toggle { margin-top: 10px; opacity: 0; transition: opacity 0.8s ease-in; }
+.older-toggle.visible { opacity: 1; }
+
+/* MOBILE STYLES */
+@media (max-width: 1000px) {
+  body { margin: 0 15px; padding: 0; overflow-x: hidden; }
   .responsive-logo { height: 100px; }
-  body { margin: 0 20px; padding: 0; overflow-x: hidden; }
 
-  /* Make disclaimer and rev network boxes uniform */
-  .disclaimer-box,
-  .rev-network-box {
+  /* Table as cards */
+  #home-table,
+  #home-table thead,
+  #home-table tbody,
+  #home-table th,
+  #home-table td,
+  #home-table tr {
+    display: block;
     width: 100%;
-    padding: 15px;
-    margin-top: 20px;
-    box-sizing: border-box;
   }
 
-  .disclaimer-box p,
-  .rev-network-inner p {
-    font-size: 14px;
-    line-height: 1.5;
+  #home-table thead { display: none; }
+
+  #home-table tr {
+    margin: 0 auto 15px auto;
+    max-width: 580px;
+    border-radius: 8px;
+    padding: 12px 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
   }
+
+  #home-table td {
+    display: block;
+    text-align: left;
+    padding: 4px 0;
+    border: none;
+  }
+
+  #home-table td[data-label="Game"] span { display: block; }
+
+  #home-table td[data-label="Game"]::before { content: ""; }
+  #home-table td::before { content: attr(data-label) ": "; font-weight: bold; color: #333; }
 }
 </style>
 </head>
 <body>
 
-<div style="display: flex; align-items: center; gap: 12px;">
-  <img src="logo.png" alt="BestValueBets Logo" class="responsive-logo">
+<!-- Logo + Intro + Graph -->
+<div class="intro-graph-wrapper">
+  <div class="intro-box">
+    <img src="logo.png" alt="BestValueBets Logo" class="responsive-logo">
+    <p class="intro-text">
+      With over 30 years of experience and tens of thousands of bets placed, I select and share bets I consider valuable. Over the years, my consistent profitability has led to limits and restrictions at most bookmakers. <strong>Important:</strong> Past results do not guarantee future success. Always bet responsibly!
+      </p>
+  </div>
+  <div class="graph-container">
+    <img id="graph-image" 
+         src="https://raw.githubusercontent.com/bjoorck/Bestvaluebets/data/canvas.png" 
+         alt="Win/Loss and ROI trend graph" loading="lazy">
+  </div>
 </div>
 
-<main>
-<div class="graph-container">
-  <img id="graph-image" 
-       src="https://raw.githubusercontent.com/bjoorck/Bestvaluebets/data/canvas.png" 
-       alt="Win/Loss and ROI trend graph" loading="lazy">
-</div>
-
+<!-- Tips Table -->
 <table id="home-table">
   <thead>
     <tr>
-      <th scope="col">Event Date</th><th scope="col">Sport</th><th scope="col">Game</th><th scope="col">Bet</th><th scope="col">Odds</th><th scope="col">Stake</th><th scope="col">Bookmaker</th><th scope="col">Result</th>
+      <th>Game</th><th>Event Date</th><th>Sport</th>
+      <th>Bet</th><th>Odds</th><th>Stake</th>
+      <th>Bookmaker</th><th>Result</th>
     </tr>
   </thead>
+
+<noscript>
+  <tbody>
+    <tr>
+      <td colspan="8" style="text-align:center; padding:20px;">
+        Bet table require JavaScript to be enabled.  
+        Please enable JavaScript in your browser settings.
+      </td>
+    </tr>
+  </tbody>
+</noscript>
+
+
   <tbody id="recent-tips"></tbody>
   <tbody id="older-tips" style="display:none;"></tbody>
 </table>
@@ -74,6 +170,7 @@ th { background-color: #f0f0f0; }
 <div class="older-toggle">
   <button onclick="toggleOlderTips()" id="toggle-button" aria-expanded="false">Show older bets</button>
 </div>
+
 
 <!-- Rev Network Section -->
 <section class="rev-network-box">
@@ -89,170 +186,201 @@ th { background-color: #f0f0f0; }
   </div>
 </section>
 
+<!-- Disclaimer -->
 <div class="disclaimer-box">
-  <h3 style="text-align: left; color: #333; font-size: 15px;">Disclaimer:</h3>
-  <p style="text-align: left; color: #555; line-height: 1.6;">
-    Past performance is not a guarantee of future results. We do not provide betting recommendations or advice. We share bets that we personally place or would place if not restricted by bookmaker limits. We do not accept responsibility for any potential losses incurred by others. Even well-considered betting carries risk. Gambling can still lead to addiction, financial loss, wasted time, and damage to self-esteem.
+  <h3 style="text-align:left; color:#333; font-size:15px;">Disclaimer:</h3>
+  <p style="text-align:left; color:#555; line-height:1.6;">
+    Past performance is not a guarantee of future results. We do not provide betting recommendations or advice. We share bets that we personally place or would place if not restricted by bookmaker limits. We do not accept responsibility for any potential losses incurred by others. Even well-considered betting carries risk.
   </p>
-  <p style="text-align: left; color: #555; line-height: 1.6;">
+  <p style="text-align:left; color:#555; line-height:1.6;">
     Always consult a professional regarding the tax implications of any betting winnings. Only bet with amounts you can comfortably afford to lose.
   </p>
-  <p style="text-align: left; color: #555; line-height: 1.6;">
-    BestValueBets.com is an independent affiliate website. We may receive a commission when users click on links and sign up or place bets on third-party platforms. We do not operate or offer gambling services ourselves. Our content is intended for informational purposes only and is strictly for users aged 18 and over.
+  <p style="text-align:left; color:#555; line-height:1.6;">
+    BestValueBets.com is an independent affiliate website. We may receive a commission when users click on links and sign up or place bets on third-party platforms. Content is for users 18+ only.
   </p>
-  <p style="text-align: left; color: #555; line-height: 1.6;">
+  <p style="text-align:left; color:#555; line-height:1.6;">
     This website uses cookies for analytics and affiliate tracking. By continuing to browse, you accept our use of cookies.
   </p>
-  <p style="text-align: left; color: #555; line-height: 1.6;">
-    BestValueBets.com is not directed at users in Finland or jurisdictions where online gambling promotion is prohibited. 
+  <p style="text-align:left; color:#555; line-height:1.6;">
+    BestValueBets.com is not directed at users in Finland or jurisdictions where online gambling promotion is prohibited.
   </p>
 </div>
 
-<p>
-
+<!-- Footer -->
 <footer>
-  <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
-    <p style="margin: 0;">© 2025 BestValueBets.com. All rights reserved.</p>
+  <div style="display:flex; align-items:center; gap:15px; flex-wrap:wrap; max-width:580px; margin:20px auto;">
+    <p style="margin:0;">© 2025 BestValueBets.com. All rights reserved.</p>
     <nav>
-      <ul style="list-style:none; display:flex; gap:20px; padding:0; margin:0; flex-wrap: wrap;">
+      <ul style="list-style:none; display:flex; gap:20px; padding:0; margin:0; flex-wrap:wrap;">
         <li><a href='/contact'>Contact</a></li>
         <li><a href='/disclaimer'>Disclaimer</a></li>
-	<li><a href='/privacy-policy'>Privacy-Policy</a></li>
-	<li><a href='/terms-and-conditions'> Terms & Conditions</a></li>
+        <li><a href='/privacy-policy'>Privacy-Policy</a></li>
+        <li><a href='/terms-and-conditions'>Terms & Conditions</a></li>
       </ul>
     </nav>
   </div>
 </footer>
 
 <script>
-// --- Affiliate Links ---
-const affiliateLinks = {
- // "Bet365": "https://www.bet365.com",
- // "Pinnacle": "https://www.pinnacle.com",
- // "PokerStars": "https://www.pokerstars.com",
- // "Coolbet": "https://www.coolbet.com",
- // "Unibet": "https://www.unibet.com",
- // "Betsson": "https://www.betsson.com",
- // "William Hill": "https://sports.williamhill.com/betting/en-gb",
- // "Betway": "https://www.betway.com",
- // "Ninja Casino": "https://www.ninjacasino.com",
- // "Wildz": "https://www.wildz.com",
- // "Epicbet": "https://www.epicbet.com",
- // "Tonybet": "https://www.tonybet.com"
-};
+// affiliate links object (fill as needed)
+const affiliateLinks = {};
 
-// --- CSV parser ---
+// safe parse: date + optional time -> Date or null
+function parseEventDate(dateStr, timeStr) {
+  if (!dateStr) return null;
+  let s = dateStr.trim();
+  if (timeStr && timeStr.trim()) s += ' ' + timeStr.trim();
+
+  // Try multiple parse attempts
+  let d = new Date(s);
+  if (!isNaN(d)) return d;
+
+  // replace space with T (ISO-like)
+  d = new Date(s.replace(' ', 'T'));
+  if (!isNaN(d)) return d;
+
+  // If time without seconds, add :00
+  const timeOnlyMatch = s.match(/\b(\d{1,2}:\d{2})(?!:)/);
+  if (timeOnlyMatch) {
+    const s2 = s.replace(timeOnlyMatch[1], timeOnlyMatch[1] + ':00');
+    d = new Date(s2);
+    if (!isNaN(d)) return d;
+    d = new Date(s2.replace(' ', 'T'));
+    if (!isNaN(d)) return d;
+  }
+
+  // fallback: invalid -> null
+  return null;
+}
+
 function parseCSVLine(line){
   const result=[]; let cur="", inQuotes=false;
   for(let i=0;i<line.length;i++){
     const ch=line[i];
-    if(ch==='"'){ 
-      if(inQuotes && i+1<line.length && line[i+1]==='"'){ cur+='"'; i++; } 
-      else inQuotes=!inQuotes; 
-    }
-    else if(ch===',' && !inQuotes){ result.push(cur); cur=""; }
+    if(ch==='"'){
+      if(inQuotes && i+1<line.length && line[i+1]==='"'){ cur+='"'; i++; }
+      else inQuotes=!inQuotes;
+    } else if(ch===',' && !inQuotes){ result.push(cur); cur=""; }
     else cur+=ch;
   }
   result.push(cur);
   return result.map(f=>f.trim());
 }
 
-// --- Create table row ---
-function createRow(tip) {
-  const tr = document.createElement("tr");
-  if (tip.result) tr.className = tip.result.toLowerCase().replace(/\s+/g,"-");
+function createRow(tip){
+  const tr=document.createElement("tr");
+  if(tip.result) tr.className=tip.result.toLowerCase().replace(/\s+/g,"-");
 
-  let gameCell = tip.game || "";
-  let eventDate = null;
-  try { eventDate = new Date(tip.date); } catch(e) {}
+  // raw game text
+  const rawGame = tip.game || "";
 
+  // parse event date/time
+  const eventDate = parseEventDate(tip.date, tip.time);
   const now = new Date();
-  const isUpcoming = eventDate && eventDate > now && (!tip.result || tip.result.toLowerCase() === "pending");
-  const isStartedPending = eventDate && eventDate <= now && (!tip.result || tip.result.toLowerCase() === "pending");
 
+  // determine upcoming / started-but-pending
+  const isUpcoming = eventDate && eventDate > now && (!tip.result || tip.result.toLowerCase()==="pending");
+  const isStartedPending = eventDate && eventDate <= now && (!tip.result || tip.result.toLowerCase()==="pending");
+
+  // build game text for mobile/desktop (split only visually on mobile)
+  let gameInner = rawGame;
+  if (window.innerWidth <= 800 && gameInner.includes("/")) {
+    gameInner = gameInner.split("/").map(s => s.trim()).join("<br>");
+    gameInner = `<span>${gameInner}</span>`;
+  } else {
+    // keep plain text on desktop
+    gameInner = gameInner;
+  }
+
+  // decide linking: deeplink only if game in future (isUpcoming) AND deeplink exists
   if (isUpcoming && tip.deeplink) {
-    gameCell = `<a href="${tip.deeplink}" target="_blank" rel="noopener noreferrer">${gameCell}</a>`;
+    gameInner = `<a href="${tip.deeplink}" target="_blank" rel="noopener noreferrer">${gameInner}</a>`;
   } else if (tip.company && affiliateLinks[tip.company]) {
-    gameCell = `<a href="${affiliateLinks[tip.company]}" target="_blank" rel="noopener noreferrer">${gameCell}</a>`;
+    // affiliate link fallback (for game cell) if deeplink not used
+    gameInner = `<a href="${affiliateLinks[tip.company]}" target="_blank" rel="noopener noreferrer">${gameInner}</a>`;
   }
 
-  if (isStartedPending) {
-    gameCell += ` <span title="The game is either ongoing or finished. Result will be updated." style="font-size:14px; cursor:help;">⏳</span>`;
-  }
+  // hourglass appended to game when started pending
+  // if (isStartedPending) {
+  //  gameInner += ` <span title="The game is either ongoing or finished. Result will be updated." style="font-size:14px; cursor:help;">⏳</span>`;
+  // }
 
+  // bookmaker cell (affiliate link if available)
   let bookmakerCell = tip.company || "";
   if (tip.company && affiliateLinks[tip.company]) {
     bookmakerCell = `<a href="${affiliateLinks[tip.company]}" target="_blank" rel="noopener noreferrer">${tip.company}</a>`;
   }
 
+  // odds formatting
   let oddsText = "";
   if (tip.odds) {
     const f = parseFloat(tip.odds);
     if (!isNaN(f)) {
-      const decimals = (tip.odds.split(".")[1] || "").length;
+      const decimals = (tip.odds.split(".")[1]||"").length;
       oddsText = f % 1 === 0 ? f.toString() : f.toFixed(decimals === 3 ? 3 : 2);
     }
   }
 
+  // result cell (if empty & started-pending maybe still empty; hourglass shown on game cell)
+  const resultCell = tip.result || "";
+
   tr.innerHTML = `
-    <td>${tip.date||""}</td>
-    <td>${tip.sport||""}</td>
-    <td>${gameCell}</td>
-    <td>${tip.bet||""}</td>
-    <td>${oddsText}</td>
-    <td>${tip.stake||""}</td>
-    <td>${bookmakerCell}</td>
-    <td>${tip.result||""}</td>
+    <td data-label="Event Date">${tip.date||""}${tip.time ? " " + tip.time : ""}</td>
+    <td data-label="Sport">${tip.sport||""}</td>
+    <td data-label="Game">${gameInner}</td>
+    <td data-label="Bet">${tip.bet||""}</td>
+    <td data-label="Odds">${oddsText}</td>
+    <td data-label="Stake">${tip.stake||""}</td>
+    <td data-label="Bookmaker">${bookmakerCell}</td>
+    <td data-label="Result">${resultCell}</td>
   `;
   return tr;
 }
 
-// --- Toggle older tips ---
 function toggleOlderTips(){
-  const tbody = document.getElementById("older-tips");
-  const btn = document.getElementById("toggle-button");
-  const expanded = tbody.style.display==="";
+  const tbody=document.getElementById("older-tips");
+  const btn=document.getElementById("toggle-button");
+  const expanded=tbody.style.display==="";
   if(!expanded){ tbody.style.display=""; btn.textContent="Hide older bets"; btn.setAttribute("aria-expanded","true"); }
   else { tbody.style.display="none"; btn.textContent="Show older bets"; btn.setAttribute("aria-expanded","false"); }
 }
 
-// --- Import tips with chunked rendering ---
 async function importTips(){
-  const recentTbody = document.getElementById("recent-tips");
-  const olderTbody = document.getElementById("older-tips");
+  const recentTbody=document.getElementById("recent-tips");
+  const olderTbody=document.getElementById("older-tips");
 
   try{
-    const newRes = await fetch("https://raw.githubusercontent.com/bjoorck/Bestvaluebets/data/tips-new.csv");
-    const newText = await newRes.text();
-    const newLines = newText.split(/\r?\n/).filter(l=>l.trim());
-    const newHeaders = parseCSVLine(newLines.shift());
+    const newRes=await fetch("https://raw.githubusercontent.com/bjoorck/Bestvaluebets/data/tips-new.csv");
+    const newText=await newRes.text();
+    const newLines=newText.split(/\r?\n/).filter(l=>l.trim());
+    const newHeaders=parseCSVLine(newLines.shift());
     newLines.forEach(line=>{
-      const values = parseCSVLine(line);
-      const tip = {};
-      newHeaders.forEach((h,i)=> tip[h] = values[i]||"");
-      tip.id = tip.id || (Date.now() + Math.random()).toString();
+      const values=parseCSVLine(line);
+      const tip={};
+      newHeaders.forEach((h,i)=>tip[h]=values[i]||"");
+      tip.id=tip.id||(Date.now()+Math.random()).toString();
       recentTbody.appendChild(createRow(tip));
     });
   }catch(err){ console.error("Error loading new tips:", err); }
 
   try{
-    const oldRes = await fetch("https://raw.githubusercontent.com/bjoorck/Bestvaluebets/data/tips-older.csv");
-    const oldText = await oldRes.text();
-    const oldLines = oldText.split(/\r?\n/).filter(l=>l.trim());
-    const oldHeaders = parseCSVLine(oldLines.shift());
-    const chunkSize = 200; let idx = 0;
+    const oldRes=await fetch("https://raw.githubusercontent.com/bjoorck/Bestvaluebets/data/tips-older.csv");
+    const oldText=await oldRes.text();
+    const oldLines=oldText.split(/\r?\n/).filter(l=>l.trim());
+    const oldHeaders=parseCSVLine(oldLines.shift());
+    const chunkSize=200; let idx=0;
 
     function appendChunk(){
-      const chunk = oldLines.slice(idx, idx + chunkSize);
+      const chunk=oldLines.slice(idx, idx+chunkSize);
       chunk.forEach(line=>{
-        const values = parseCSVLine(line);
-        const tip = {};
-        oldHeaders.forEach((h,i)=> tip[h] = values[i]||"");
-        tip.id = tip.id || (Date.now() + Math.random()).toString();
+        const values=parseCSVLine(line);
+        const tip={};
+        oldHeaders.forEach((h,i)=>tip[h]=values[i]||"");
+        tip.id=tip.id||(Date.now()+Math.random()).toString();
         olderTbody.appendChild(createRow(tip));
       });
-      idx += chunkSize;
-      if(idx < oldLines.length) setTimeout(appendChunk, 10);
+      idx+=chunkSize;
+      if(idx<oldLines.length) setTimeout(appendChunk,10);
     }
     appendChunk();
   }catch(err){ console.error("Error loading older tips:", err); }
@@ -260,22 +388,18 @@ async function importTips(){
   document.querySelector(".older-toggle").classList.add("visible");
 }
 
-// --- Graph fallback ---
 document.addEventListener("DOMContentLoaded", ()=>{
-  const graphImage = document.getElementById("graph-image");
-
+  const graphImage=document.getElementById("graph-image");
   graphImage.addEventListener("error", ()=>{
-    const fallback = document.createElement("div");
-    fallback.textContent = "Graph not available";
-    fallback.style.cssText = "width:100%; height:200px; border:1px solid #ccc; border-radius:6px; display:flex; align-items:center; justify-content:center; background:#f9f9f9; color:#555;";
+    const fallback=document.createElement("div");
+    fallback.textContent="Graph not available";
+    fallback.style.cssText="width:100%; height:200px; border:1px solid #ccc; border-radius:6px; display:flex; align-items:center; justify-content:center; background:#f9f9f9; color:#555;";
     graphImage.parentNode.appendChild(fallback);
     graphImage.style.display="none";
   });
 
   importTips();
 });
-
 </script>
-
 </body>
 </html>
