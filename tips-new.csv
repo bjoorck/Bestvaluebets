@@ -1,4 +1,5 @@
 id,date,startTime,sport,game,bet,odds,stake,company,result,deeplink
+1760373549695,2025-10-14,14:00,Tennis,Jesper De Jong – Marton Fucsovics / ATP Stockholm,1st set 4:6,5,1,Epicbet,,
 1760243973735,2025-10-12,11:30,Tennis,Arthur Rinderknech – Valentin Vacherot / ATP  Shanghai ,2,2.4,2,Unibet,Win,
 1760029392502,2025-10-11,09:00,Tennis,Novak Djokovic – Valentin Vacherot / ATP Masters Shanghai ,2,7,2,Ninja Casino,Win,https://www.ninjacasino.com/sports-betting#/sport/68/category/542/championship/43680/event/14235473
 1759676807989,2025-10-11,02:00,Soccer,Spain – Georgia / World Cup Europe Qualification,Over 2.5,1.49,4,Olybet,Loss,https://www.olybet.eu/sports/pre-match/event-view/Soccer/World/18277589/world-cup-europe-qualification/28024832/spain-georgia/search
@@ -18,4 +19,3 @@ id,date,startTime,sport,game,bet,odds,stake,company,result,deeplink
 1758470105221,2025-09-22,04:00,Tennis,Alexander Zverev – Taylor Fritz / Laver Cup,Total tie-break = 0,2.9,6,William Hill,Loss,
 1758096062306,2025-09-21,21:45,Soccer,Marseille – PSG / France - Ligue 1,Marseille over 3.5 corners ,1.75,3,Unibet,Void,
 1758344507024,2025-09-20,17:00,Ice Hockey,IPK – Kiekko-Vantaa / Finland - Mestis,3rd period - Over 2.5 ,3.1,4,Unibet,Loss,
-1758344772058,2025-09-20,17:00,Ice Hockey,JYP – Pelicans / Finland - Liiga,3rd period - Over 2.5,3.4,4,Unibet,Loss,
