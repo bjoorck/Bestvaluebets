@@ -1,5 +1,6 @@
 id,date,startTime,sport,game,bet,odds,stake,company,result,deeplink
-1760982807310,2025-10-22,13:00,Tennis,Taylor Fritz – Valentin Vacherot / ATP Basel - Hard ,2,4.5,4,Coolbet,,
+1761285846467,2025-10-24,22:00,Tennis,Casper Ruud – A. Davidovich Fokina / ATP Basel,1,1.515,2,Pinnacle,,
+1760982807310,2025-10-22,13:00,Tennis,Taylor Fritz – Valentin Vacherot / ATP Basel - Hard ,2,4.5,4,Coolbet,Loss,
 1760872034601,2025-10-21,10:00,Tennis,Mpetshi Perricard – Jo Fonseca / ATP Basel 2025 ,6:3 1st set,7,2,Epicbet,Loss,
 1760684057670,2025-10-17,18:00,Ice Hockey,KooKoo – Lukko / Finland Liiga,Over 6.5 OT,2.7,3,Olybet,Win,https://www.olybet.eu/sports/pre-match/event-view/IceHockey/Finland/1721/liiga/28206439/kookoo-lukko/search
 1760373549695,2025-10-15,14:00,Tennis,Jesper De Jong – Marton Fucsovics / ATP Stockholm,1st set 4:6,5,1,Epicbet,Loss,
@@ -18,4 +19,3 @@ id,date,startTime,sport,game,bet,odds,stake,company,result,deeplink
 1758873283319,2025-09-27,14:00,Soccer,Nykopings BIS – IF Sylvia / Sweden - Division 2,3-way hcp 1(1:0),2.04,5,Tonybet,Win,https://tonybet.com/fi/prematch/football/1008051-division-2-sodra-svealand/7734625-nykopings-bis-if-sylvia
 1758733245931,2025-09-26,22:15,Soccer,Benfica – Gil Vicente / Portugal - Primeira Liga,Benfica Over 7.5 - Corners ,2.55,6,Epicbet,Loss,
 1758689838814,2025-09-25,05:00,Tennis,Lorenzo Sonego – Alexander Zverev / China - ATP Beijing,1st set 4:6 ,4.33,2,Epicbet,Win,
-1758601080470,2025-09-23,18:30,Ice Hockey,Pyry – Ketterä / Finland - Mestis,3rd period - Over 2.5 ,3.05,4,Unibet,Loss,
