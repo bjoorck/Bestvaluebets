@@ -1,6 +1,6 @@
 id,date,startTime,sport,game,bet,odds,stake,company,result,deeplink
 1761379718296,2025-10-26,15:30,Soccer,Feyenoord – PSV Eindhoven / Netherlands - Eredivisie ,Under 4.5 - cards,2.58,5,Betsson,,
-1761383430384,2025-10-25,18:00,Tennis,Jannik Sinner – Alex De Minaur / ATP Vienna ,Over 9.5 - aces,2.6,2,Epicbet,,
+1761383430384,2025-10-25,18:00,Tennis,Jannik Sinner – Alex De Minaur / ATP Vienna ,Over 9.5 - aces,2.6,2,Epicbet,Loss,
 1761285846467,2025-10-24,22:00,Tennis,Casper Ruud – A. Davidovich Fokina / ATP Basel,1,1.515,2,Pinnacle,Loss,
 1760982807310,2025-10-22,13:00,Tennis,Taylor Fritz – Valentin Vacherot / ATP Basel - Hard ,2,4.5,4,Coolbet,Loss,
 1760872034601,2025-10-21,10:00,Tennis,Mpetshi Perricard – Jo Fonseca / ATP Basel 2025 ,6:3 1st set,7,2,Epicbet,Loss,
@@ -10,12 +10,12 @@ id,date,startTime,sport,game,bet,odds,stake,company,result,deeplink
 1760243973735,2025-10-12,11:30,Tennis,Arthur Rinderknech – Valentin Vacherot / ATP  Shanghai ,2,2.4,2,Unibet,Win,
 1760029392502,2025-10-11,09:00,Tennis,Novak Djokovic – Valentin Vacherot / ATP Masters Shanghai ,2,7,2,Ninja Casino,Win,https://www.ninjacasino.com/sports-betting#/sport/68/category/542/championship/43680/event/14235473
 1759676807989,2025-10-11,02:00,Soccer,Spain – Georgia / World Cup Europe Qualification,Over 2.5,1.49,4,Olybet,Loss,https://www.olybet.eu/sports/pre-match/event-view/Soccer/World/18277589/world-cup-europe-qualification/28024832/spain-georgia/search
+1759676807989,2025-10-11,00:00,Soccer,Spain – Georgia / World Cup Europe Qualification,Over 2.5,1.49,4,Olybet,,https://www.olybet.eu/sports/pre-match/event-view/Soccer/World/18277589/world-cup-europe-qualification/28024832/spain-georgia/search
 1759781472063,2025-10-10,21:45,Soccer,Germany – Luxembourg / Europe - World Cup Qualifying ,Luxemburg under 1.5 - shot on target,2.1,4,Bet365,Win,https://www.bet365.com/?nr=1#/AC/B1/C1/D8/E182192484/F3/I9/
 1759649349155,2025-10-05,16:00,Soccer,Aston Villa FC – Burnley / England - Premier League,Under 4.5 - offsides,1.95,3,Ninja Casino,Loss,https://www.ninjacasino.com/sports-betting#/sport/66/category/497/championship/2936/event/13014777
+1759649349155,2025-10-05,16:00,Soccer,Aston Villa FC – Burnley / England - Premier League,Under 4.5 - offsides,1.95,3,Ninja Casino,Loss,https://www.ninjacasino.com/sports-betting#/sport/66/category/497/championship/2936/event/13014777
+1759595388553,2025-10-05,14:40,Tennis,T Griekspoor – Sinner / ATP Shanghai,1st set AH2(−2.5),2.0,3,PokerStars,Loss,https://eur.pokerstars.com/sports/tennis/2/atp-shanghai-2025/12763008/t-griekspoor-v-sinner/34808849/
 1759595388553,2025-10-05,14:40,Tennis,T Griekspoor – Sinner / ATP Shanghai,1st set AH2(−2.5),2.0,3,PokerStars,Loss,https://eur.pokerstars.com/sports/tennis/2/atp-shanghai-2025/12763008/t-griekspoor-v-sinner/34808849/
 1759607914884,2025-10-05,09:00,Tennis,"Preston, T – Akita S / ITF Women - ITF W35 Darwin ",1,1.5,3,Betsson,Win,https://www.betsson.com/en/sportsbook/tennis/itf-women/itf-w35-darwin/preston-t-akita-s?eventId=f-VjZmqLhq0EKIRVHs8c3_ig&eti=0
+1759607914884,2025-10-05,09:00,Tennis,"Preston, T – Akita S / ITF Women - ITF W35 Darwin ",1,1.5,3,Betsson,Win,https://www.betsson.com/en/sportsbook/tennis/itf-women/itf-w35-darwin/preston-t-akita-s?eventId=f-VjZmqLhq0EKIRVHs8c3_ig&eti=0
 1759174075482,2025-10-02,19:30,Ice Hockey,Lorenskog IK – Stavanger Oilers / Norway - EHL ,2,1.4,1,Epicbet,Win,
-1759344733925,2025-10-02,10:00,Tennis,Mackenzie McDonald – Quentin Halys / ATP Shanghai ,1st set 6:4 ,5.6,2,Unibet,Loss,
-1758995729787,2025-09-28,12:00,Tennis,Carlos Alcaraz – Brandon Nakashima / ATP Tokyo ,1st set 6:4,5,3,Epicbet,Loss,
-1758914782126,2025-09-27,17:00,Soccer,TPV – VPS-J / Finland Kakkonnen,Under 3.75,1.9,5,Bet365,Win,
-1758873283319,2025-09-27,14:00,Soccer,Nykopings BIS – IF Sylvia / Sweden - Division 2,3-way hcp 1(1:0),2.04,5,Tonybet,Win,https://tonybet.com/fi/prematch/football/1008051-division-2-sodra-svealand/7734625-nykopings-bis-if-sylvia
