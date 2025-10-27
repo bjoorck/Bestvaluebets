@@ -131,7 +131,8 @@ th { background-color: #f0f0f0; }
   <div class="intro-box">
     <img src="logo.png" alt="BestValueBets Logo" class="responsive-logo">
     <p class="intro-text">
-      With over 30 years of experience and tens of thousands of bets placed, I select and share bets I consider valuable. Over the years, my consistent profitability has led to limits and restrictions at most bookmakers. <strong>Important:</strong> Past results do not guarantee future success. Always bet responsibly!
+      With over 30 years of experience and tens of thousands of bets placed, I select and share bets I consider valuable. Over the years, my consistent profitability has led to limits and restrictions at most bookmakers. <strong>Important:</strong> Past results do not guarantee future success. 
+      <p style="margin:5px 0;">🔞 <strong>18+ Only</strong> | Please gamble responsibly!</p>
       </p>
   </div>
   <div class="graph-container">
@@ -208,18 +209,53 @@ th { background-color: #f0f0f0; }
 
 <!-- Footer -->
 <footer>
-  <div style="display:flex; align-items:center; gap:15px; flex-wrap:wrap; max-width:580px; margin:20px auto;">
+  <div style="
+    display:flex; 
+    align-items:center; 
+    gap:15px; 
+    flex-wrap:wrap; 
+    justify-content:center; 
+    text-align:center; 
+    width:90%; 
+    max-width:1000px; 
+    margin:20px auto;
+  ">
     <p style="margin:0;">© 2025 BestValueBets.com. All rights reserved.</p>
     <nav>
-      <ul style="list-style:none; display:flex; gap:20px; padding:0; margin:0; flex-wrap:wrap;">
-        <li><a href='/contact'>Contact</a></li>
-        <li><a href='/disclaimer'>Disclaimer</a></li>
-        <li><a href='/privacy-policy'>Privacy-Policy</a></li>
-        <li><a href='/terms-and-conditions'>Terms & Conditions</a></li>
+      <ul style="list-style:none; display:flex; gap:20px; padding:0; margin:0; flex-wrap:wrap; justify-content:center;">
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/disclaimer">Disclaimer</a></li>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/terms-and-conditions">Terms & Conditions</a></li>
+        <li><a href="/responsible-gambling">Responsible Gambling</a></li>
       </ul>
     </nav>
   </div>
+
+  <div style="text-align:center; margin-top:15px; font-size:14px; line-height:1.6; width:90%; max-width:1000px; margin-left:auto; margin-right:auto;">
+    <p style="margin:5px 0;">🔞 <strong>18+ Only</strong> | Please gamble responsibly!</p>
+    <p style="margin:5px 0;">
+      Support available from 
+      <a href="https://www.gamcare.org.uk" target="_blank" rel="noopener noreferrer">GamCare (UK)</a>, 
+      <a href="https://www.begambleaware.org" target="_blank" rel="noopener noreferrer">BeGambleAware (UK)</a>, 
+      <a href="https://www.gamblingtherapy.org" target="_blank" rel="noopener noreferrer">Gambling Therapy (EU/Global)</a>, 
+      and 
+      <a href="https://www.egba.eu/responsible-gambling/national-resources/" target="_blank" rel="noopener noreferrer">EGBA National Resources (EU)</a>.
+    </p>
+    <p style="margin:5px 0;">
+      BestValueBets.com promotes <strong>responsible betting</strong> and only links to <strong>licensed operators</strong> regulated by the 
+      <a href="https://www.gamblingcommission.gov.uk" target="_blank" rel="noopener noreferrer">UK Gambling Commission</a>, 
+      the 
+      <a href="https://www.mga.org.mt/" target="_blank" rel="noopener noreferrer">Malta Gaming Authority</a>, 
+      or the 
+      <a href="https://www.emta.ee/eng" target="_blank" rel="noopener noreferrer">Estonian Tax and Customs Board</a>.
+    </p>
+  </div>
 </footer>
+
+
+
+
 
 <script>
 // affiliate links object (fill as needed)
@@ -350,7 +386,7 @@ async function importTips(){
   const olderTbody=document.getElementById("older-tips");
 
   try{
-    const newRes=await fetch("https://raw.githubusercontent.com/bjoorck/Bestvaluebets/data/tips-new.csv");
+    const newRes=await fetch("https://raw.githubusercontent.com/bjoorck/Bestvaluebets/data/tips-new.csv?ts=" + Date.now());
     const newText=await newRes.text();
     const newLines=newText.split(/\r?\n/).filter(l=>l.trim());
     const newHeaders=parseCSVLine(newLines.shift());
@@ -364,7 +400,7 @@ async function importTips(){
   }catch(err){ console.error("Error loading new tips:", err); }
 
   try{
-    const oldRes=await fetch("https://raw.githubusercontent.com/bjoorck/Bestvaluebets/data/tips-older.csv");
+    const oldRes=await fetch("https://raw.githubusercontent.com/bjoorck/Bestvaluebets/data/tips-older.csv?ts=" + Date.now());
     const oldText=await oldRes.text();
     const oldLines=oldText.split(/\r?\n/).filter(l=>l.trim());
     const oldHeaders=parseCSVLine(oldLines.shift());
@@ -388,18 +424,24 @@ async function importTips(){
   document.querySelector(".older-toggle").classList.add("visible");
 }
 
-document.addEventListener("DOMContentLoaded", ()=>{
-  const graphImage=document.getElementById("graph-image");
-  graphImage.addEventListener("error", ()=>{
-    const fallback=document.createElement("div");
-    fallback.textContent="Graph not available";
-    fallback.style.cssText="width:100%; height:200px; border:1px solid #ccc; border-radius:6px; display:flex; align-items:center; justify-content:center; background:#f9f9f9; color:#555;";
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const graphImage = document.getElementById("graph-image");
+  graphImage.src += "?v=" + Date.now(); // 🆕 cache-buster
+
+  graphImage.addEventListener("error", () => {
+    const fallback = document.createElement("div");
+    fallback.textContent = "Graph not available";
+    fallback.style.cssText =
+      "width:100%; height:200px; border:1px solid #ccc; border-radius:6px; display:flex; align-items:center; justify-content:center; background:#f9f9f9; color:#555;";
     graphImage.parentNode.appendChild(fallback);
-    graphImage.style.display="none";
+    graphImage.style.display = "none";
   });
 
   importTips();
 });
+
 </script>
 </body>
 </html>
