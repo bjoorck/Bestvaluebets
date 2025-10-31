@@ -1,6 +1,7 @@
 id,date,startTime,sport,game,bet,odds,stake,company,result,deeplink
 1761727440667,2025-10-31,19:00,Ice Hockey,Narvik – Nidaros Hockey / Norway - EHL ,AH1(0),1.87,3,Epicbet,,
-1761801111061,2025-10-30,12:00,Tennis,Cameron Norrie – Valentin Vacherot / ATP Paris ,2,1.8,2,888sport,,
+1761905265054,2025-10-31,15:00,Tennis,Valentin Vacherot – Felix Auger Aliassime /  ATP Paris 2025,Auger Aliassime Over 3.5 - double faults,2.25,1,Bet-at-home,,
+1761801111061,2025-10-30,12:00,Tennis,Cameron Norrie – Valentin Vacherot / ATP Paris ,2,1.8,2,888sport,Win,
 1761688479639,2025-10-29,12:00,Tennis,Arthur Rinderknech – Valentin Vacherot / ATP - Paris ,2,1.666,2,Pinnacle,Win,
 1761637792857,2025-10-28,13:00,Tennis,Vacherot – Lehecka / ATP Paris 2025 ,Over 10.5 1st set,2.75,2,PokerStars,Loss,
 1761637817055,2025-10-28,13:00,Tennis,Vacherot – Lehecka / ATP Paris 2025 ,1,2.85,2,Pinnacle,Win,
@@ -18,4 +19,3 @@ id,date,startTime,sport,game,bet,odds,stake,company,result,deeplink
 1760029392502,2025-10-11,09:00,Tennis,Novak Djokovic – Valentin Vacherot / ATP Masters Shanghai ,2,7,2,Ninja Casino,Win,https://www.ninjacasino.com/sports-betting#/sport/68/category/542/championship/43680/event/14235473
 1759676807989,2025-10-11,02:00,Soccer,Spain – Georgia / World Cup Europe Qualification,Over 2.5,1.49,4,Olybet,Loss,https://www.olybet.eu/sports/pre-match/event-view/Soccer/World/18277589/world-cup-europe-qualification/28024832/spain-georgia/search
 1759781472063,2025-10-10,21:45,Soccer,Germany – Luxembourg / Europe - World Cup Qualifying ,Luxemburg under 1.5 - shot on target,2.1,4,Bet365,Win,https://www.bet365.com/?nr=1#/AC/B1/C1/D8/E182192484/F3/I9/
-1759649349155,2025-10-05,16:00,Soccer,Aston Villa FC – Burnley / England - Premier League,Under 4.5 - offsides,1.95,3,Ninja Casino,Loss,https://www.ninjacasino.com/sports-betting#/sport/66/category/497/championship/2936/event/13014777
