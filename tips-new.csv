@@ -1,6 +1,8 @@
 id,date,startTime,sport,game,bet,odds,stake,company,result,deeplink
-1761928019680,2025-10-31,20:00,Tennis,"Ben Shelton – Jannik Sinner ATP / ATP Paris, Men Singles ",1,6,2,Ninja Casino,,
-1761727440667,2025-10-31,19:00,Ice Hockey,Narvik – Nidaros Hockey / Norway - EHL ,AH1(0),1.87,3,Epicbet,,
+1761994582029,2025-11-01,19:00,Tennis,A Zverev – Sinner / ATP Paris 2025,1,6.11,2,Pinnacle,,
+1761993739954,2025-11-01,15:30,Tennis,F Auger-Aliassime – Bublik / ATP Paris 2025 ,1,2.03,2,ComeOn,,
+1761928019680,2025-10-31,20:00,Tennis,"Ben Shelton – Jannik Sinner ATP / ATP Paris, Men Singles ",1,6,2,Ninja Casino,Loss,
+1761727440667,2025-10-31,19:00,Ice Hockey,Narvik – Nidaros Hockey / Norway - EHL ,AH1(0),1.87,3,Epicbet,Win,
 1761905265054,2025-10-31,15:00,Tennis,Valentin Vacherot – Felix Auger Aliassime /  ATP Paris 2025,Auger Aliassime Over 3.5 - double faults,2.25,1,Bet-at-home,Loss,
 1761801111061,2025-10-30,12:00,Tennis,Cameron Norrie – Valentin Vacherot / ATP Paris ,2,1.8,2,888sport,Win,
 1761688479639,2025-10-29,12:00,Tennis,Arthur Rinderknech – Valentin Vacherot / ATP - Paris ,2,1.666,2,Pinnacle,Win,
@@ -17,5 +19,3 @@ id,date,startTime,sport,game,bet,odds,stake,company,result,deeplink
 1760373549695,2025-10-15,14:00,Tennis,Jesper De Jong – Marton Fucsovics / ATP Stockholm,1st set 4:6,5,1,Epicbet,Loss,
 1760456723099,2025-10-14,21:45,Soccer,Turkey – Georgia / World Cup Qualifiers - UEFA ,Under 9.5 - corners,2.1,4,Betsson,Loss,https://www2.betsson.com/en/sportsbook?eventId=f-mHY5Hy4s7kC0TK9tNrkVCw&eti=0&fs=true
 1760243973735,2025-10-12,11:30,Tennis,Arthur Rinderknech – Valentin Vacherot / ATP  Shanghai ,2,2.4,2,Unibet,Win,
-1760029392502,2025-10-11,09:00,Tennis,Novak Djokovic – Valentin Vacherot / ATP Masters Shanghai ,2,7,2,Ninja Casino,Win,https://www.ninjacasino.com/sports-betting#/sport/68/category/542/championship/43680/event/14235473
-1759676807989,2025-10-11,02:00,Soccer,Spain – Georgia / World Cup Europe Qualification,Over 2.5,1.49,4,Olybet,Loss,https://www.olybet.eu/sports/pre-match/event-view/Soccer/World/18277589/world-cup-europe-qualification/28024832/spain-georgia/search
