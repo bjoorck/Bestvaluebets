@@ -1,4 +1,5 @@
 id,date,startTime,sport,game,bet,odds,stake,company,result,deeplink
+1762328684110,2025-11-05,18:00,Ice Hockey,Finland U20 – Slovakia U20 / International Friendlies U20 ,Over 5.5,2.25,5,Bet365,,
 1762159005261,2025-11-03,16:00,Tennis,Iga Swiatek – Elena Rybakina / WTA Finals - Hard ,Under 6.5 - break,1.92,6,Olybet,Win,
 1762073784155,2025-11-02,21:45,Soccer,Brest – Lyon / French Ligue 1 ,10 Or More Shots On Target,2.8,3,PokerStars,Loss,
 1762074336825,2025-11-02,18:15,Handball,Germany – Iceland / International Friendlies Men ,2(0:3),2.1,4,Bet365,Win,
@@ -18,4 +19,3 @@ id,date,startTime,sport,game,bet,odds,stake,company,result,deeplink
 1761285846467,2025-10-24,22:00,Tennis,Casper Ruud – A. Davidovich Fokina / ATP Basel,1,1.515,2,Pinnacle,Loss,
 1760982807310,2025-10-22,13:00,Tennis,Taylor Fritz – Valentin Vacherot / ATP Basel - Hard ,2,4.5,4,Coolbet,Loss,
 1760872034601,2025-10-21,10:00,Tennis,Mpetshi Perricard – Jo Fonseca / ATP Basel 2025 ,6:3 1st set,7,2,Epicbet,Loss,
-1760684057670,2025-10-17,18:00,Ice Hockey,KooKoo – Lukko / Finland Liiga,Over 6.5 OT,2.7,3,Olybet,Win,https://www.olybet.eu/sports/pre-match/event-view/IceHockey/Finland/1721/liiga/28206439/kookoo-lukko/search
