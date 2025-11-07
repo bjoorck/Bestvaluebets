@@ -1,6 +1,9 @@
 id,date,startTime,sport,game,bet,odds,stake,company,result,deeplink
-1762419328733,2025-11-06,15:00,Tennis,Alexandre Muller – Lorenzo Musetti / ATP Athens,Over 10.5 1st set,2,3.75,Bet365,,
-1762419431484,2025-11-06,15:00,Tennis,Alexandre Muller – Lorenzo Musetti / ATP Athens,AH1(+4),2,2,Pinnacle,,
+1762498462355,2025-11-12,18:00,Ice Hockey,SaiPa – Ässät,1 (incl. overtime and penalties),1.909,5,Ninja Casino,,
+1762497734524,2025-11-09,18:00,Soccer,Manchester City – Liverpool / England - Premier League ,Over 0.5 - penalties,4.88,1,Epicbet,,
+1762498147680,2025-11-09,15:00,Soccer,SJK – IF Gnistan / Finland Veikkausliiga ,Gnistan over 3.5 - corners ,1.8,3,Bet365,,
+1762419328733,2025-11-06,15:00,Tennis,Alexandre Muller – Lorenzo Musetti / ATP Athens,Over 10.5 1st set,2,3.75,Bet365,Loss,
+1762419431484,2025-11-06,15:00,Tennis,Alexandre Muller – Lorenzo Musetti / ATP Athens,AH1(+4),2,2,Pinnacle,Loss,
 1762328684110,2025-11-05,18:00,Ice Hockey,Finland U20 – Slovakia U20 / International Friendlies U20 ,Over 5.5,2.25,5,Bet365,Win,
 1762159005261,2025-11-03,16:00,Tennis,Iga Swiatek – Elena Rybakina / WTA Finals - Hard ,Under 6.5 - break,1.92,6,Olybet,Win,
 1762073784155,2025-11-02,21:45,Soccer,Brest – Lyon / French Ligue 1 ,10 Or More Shots On Target,2.8,3,PokerStars,Loss,
@@ -16,6 +19,3 @@ id,date,startTime,sport,game,bet,odds,stake,company,result,deeplink
 1761637817055,2025-10-28,13:00,Tennis,Vacherot – Lehecka / ATP Paris 2025 ,1,2.85,2,Pinnacle,Win,
 1761593017983,2025-10-28,12:00,Tennis,F Auger-Aliassime – Comesana / ATP Paris 2025 ,6:4 1st set,5,3,Coolbet,Loss,
 1761543822711,2025-10-28,12:00,Tennis,Corentin Moutet – Reilly Opelka / ATP Paris ,6:4 1st set,5,2,Epicbet,Loss,
-1761379718296,2025-10-26,15:30,Soccer,Feyenoord – PSV Eindhoven / Netherlands - Eredivisie ,Under 4.5 - cards,2.58,5,Betsson,Win,
-1761383430384,2025-10-25,18:00,Tennis,Jannik Sinner – Alex De Minaur / ATP Vienna ,Over 9.5 - aces,2.6,2,Epicbet,Loss,
-1761285846467,2025-10-24,22:00,Tennis,Casper Ruud – A. Davidovich Fokina / ATP Basel,1,1.515,2,Pinnacle,Loss,
