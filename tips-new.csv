@@ -2,6 +2,7 @@ id,date,startTime,sport,game,bet,odds,stake,company,result,deeplink
 1762807889692,2025-11-15,19:00,Soccer,Liechtenstein – Wales / World Cup Qualifiers - UEFA,Liechtenstein - Time of 1st Corner: No Corner,4,4,Betsson,,https://www.betsson.com/en/sportsbook/football/world-cup/world-cup-qualifiers-uefa/liechtenstein-wales?eventId=f-5E8OA6IPoEmR6zBYBz1VAQ&eti=0
 1762848377744,2025-11-13,19:30,Ice Hockey,Lorenskog IK – Frisk Asker / Norway - EHL,2,1.5,3,Epicbet,,https://epicbet.com/en/sports/?matchId=754772&sportId=7
 1762498462355,2025-11-12,18:00,Ice Hockey,SaiPa – Ässät,1 (incl. overtime and penalties),1.909,5,Ninja Casino,,https://www.ninjacasino.com/sports-betting#/sport/70/category/640/championship/3237/event/13300765
+1762880959302,2025-11-12,05:00,Ice Hockey,Washington Capitals – Carolina Hurricanes / North America - NHL ,2,2.01,2,Pinnacle,,
 1762497734524,2025-11-09,18:00,Soccer,Manchester City – Liverpool / England - Premier League ,Over 0.5 - penalties,4.88,1,Epicbet,Win,https://epicbet.com/en/sports/?matchId=852786&sportId=1
 1762498147680,2025-11-09,15:00,Soccer,SJK – IF Gnistan / Finland Veikkausliiga ,Gnistan over 3.5 - corners ,1.8,3,Bet365,Loss,https://www.bet365.com/#/AC/B1/C1/D8/E183792301/F3/G40/
 1762419328733,2025-11-06,15:00,Tennis,Alexandre Muller – Lorenzo Musetti / ATP Athens,Over 10.5 1st set,3.75,2,Bet365,Loss,
@@ -18,4 +19,3 @@ id,date,startTime,sport,game,bet,odds,stake,company,result,deeplink
 1761801111061,2025-10-30,12:00,Tennis,Cameron Norrie – Valentin Vacherot / ATP Paris ,2,1.8,2,888sport,Win,
 1761688479639,2025-10-29,12:00,Tennis,Arthur Rinderknech – Valentin Vacherot / ATP - Paris ,2,1.666,2,Pinnacle,Win,
 1761637792857,2025-10-28,13:00,Tennis,Vacherot – Lehecka / ATP Paris 2025 ,Over 10.5 1st set,2.75,2,PokerStars,Loss,
-1761637817055,2025-10-28,13:00,Tennis,Vacherot – Lehecka / ATP Paris 2025 ,1,2.85,2,Pinnacle,Win,
