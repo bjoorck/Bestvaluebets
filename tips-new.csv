@@ -1,8 +1,8 @@
 id,date,startTime,sport,game,bet,odds,stake,company,result,deeplink
 1762807889692,2025-11-15,19:00,Soccer,Liechtenstein – Wales / World Cup Qualifiers - UEFA,Liechtenstein - Time of 1st Corner: No Corner,4,4,Betsson,,https://www.betsson.com/en/sportsbook/football/world-cup/world-cup-qualifiers-uefa/liechtenstein-wales?eventId=f-5E8OA6IPoEmR6zBYBz1VAQ&eti=0
 1762848377744,2025-11-13,19:30,Ice Hockey,Lorenskog IK – Frisk Asker / Norway - EHL,2,1.5,3,Epicbet,,https://epicbet.com/en/sports/?matchId=754772&sportId=7
-1762936000597,2025-11-12,20:00,Ice Hockey,Kongsvinger Knights – Gruner IL / Norway 1. divisjon ,2,1.74,4,Epicbet,,https://epicbet.com/en/sports/ice-hockey?matchId=828617&sportId=7&categoryId=3481
-1762498462355,2025-11-12,18:00,Ice Hockey,SaiPa – Ässät,1 (incl. overtime and penalties),1.909,5,Ninja Casino,,https://www.ninjacasino.com/sports-betting#/sport/70/category/640/championship/3237/event/13300765
+1762936000597,2025-11-12,20:00,Ice Hockey,Kongsvinger Knights – Gruner IL / Norway 1. divisjon ,2,1.74,4,Epicbet,Win,https://epicbet.com/en/sports/ice-hockey?matchId=828617&sportId=7&categoryId=3481
+1762498462355,2025-11-12,18:00,Ice Hockey,SaiPa – Ässät,1 (incl. overtime and penalties),1.909,5,Ninja Casino,Loss,https://www.ninjacasino.com/sports-betting#/sport/70/category/640/championship/3237/event/13300765
 1762880959302,2025-11-12,05:00,Ice Hockey,Carolina Hurricanes - Washington Capitals / North America - NHL ,1,2.01,2,Pinnacle,Loss,
 1762497734524,2025-11-09,18:00,Soccer,Manchester City – Liverpool / England - Premier League ,Over 0.5 - penalties,4.88,1,Epicbet,Win,https://epicbet.com/en/sports/?matchId=852786&sportId=1
 1762498147680,2025-11-09,15:00,Soccer,SJK – IF Gnistan / Finland Veikkausliiga ,Gnistan over 3.5 - corners ,1.8,3,Bet365,Loss,https://www.bet365.com/#/AC/B1/C1/D8/E183792301/F3/G40/
