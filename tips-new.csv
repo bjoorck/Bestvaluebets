@@ -1,5 +1,6 @@
 id,date,startTime,sport,game,bet,odds,stake,company,result,deeplink
-1763290204184,2025-11-18,21:45,Soccer,Romania – San Marino / World Cup 2026 - Qualifiers - UEFA ,Both to score - No,1.909,8,Betway,,
+1763499607772,2025-11-19,05:00,Ice Hockey,Vegas Golden Knights – New York Rangers / NHL ,1,2.28,4,Unibet,,
+1763290204184,2025-11-18,21:45,Soccer,Romania – San Marino / World Cup 2026 - Qualifiers - UEFA ,Both to score - No,1.909,8,Betway,Loss,
 1763366495290,2025-11-18,21:45,Soccer,Belgium – Liechtenstein / World Cup Qualifiers ,Liechtenstein under 0.5 - corners,2.62,6,Betsson,,
 1763193064425,2025-11-16,19:00,Soccer,Azerbaijan – France / World Cup 2026 - Qualifiers,Azerbaijan 2+ shots on target,2.8,3,Betway,Loss,
 1762807889692,2025-11-15,19:00,Soccer,Liechtenstein – Wales / World Cup Qualifiers - UEFA,Liechtenstein - Time of 1st Corner: No Corner,4,4,Betsson,Loss,https://www.betsson.com/en/sportsbook/football/world-cup/world-cup-qualifiers-uefa/liechtenstein-wales?eventId=f-5E8OA6IPoEmR6zBYBz1VAQ&eti=0
@@ -18,4 +19,3 @@ id,date,startTime,sport,game,bet,odds,stake,company,result,deeplink
 1762074336825,2025-11-02,18:15,Handball,Germany – Iceland / International Friendlies Men ,2(0:3),2.1,4,Bet365,Win,
 1761994582029,2025-11-01,19:00,Tennis,A Zverev – Sinner / ATP Paris 2025,1,6.11,2,Pinnacle,Loss,
 1761993739954,2025-11-01,15:30,Tennis,F Auger-Aliassime – Bublik / ATP Paris 2025 ,1,2.03,2,ComeOn,Win,
-1761928019680,2025-10-31,20:00,Tennis,"Ben Shelton – Jannik Sinner ATP / ATP Paris, Men Singles ",1,6,2,Ninja Casino,Loss,
