@@ -1,6 +1,7 @@
 id,date,startTime,sport,game,bet,odds,stake,company,result,deeplink
-1764054441527,2025-11-25,22:00,Soccer,Chelsea – FC Barcelona / UEFA Champions League ,Under 10.5 - shot on target,2,5,Epicbet,,https://epicbet.com/en/sports/football?matchId=882229&sportId=1&categoryId=27
-1764054568414,2025-11-25,21:45,Soccer,Borussia Dortmund – Villarreal / UEFA Champions League ,Under 7.5 - shot on target,2.89,2,Epicbet,,https://epicbet.com/en/sports/football?matchId=882220&sportId=1&categoryId=27
+1764142830112,2025-11-26,19:45,Soccer,FC Copenhagen – Kairat Almaty / UEFA Champions League ,FC Copenhagen Over 5.5 - shot on target,1.909,5,Bet365,,
+1764054441527,2025-11-25,22:00,Soccer,Chelsea – FC Barcelona / UEFA Champions League ,Under 10.5 - shot on target,2,5,Epicbet,Win,https://epicbet.com/en/sports/football?matchId=882229&sportId=1&categoryId=27
+1764054568414,2025-11-25,21:45,Soccer,Borussia Dortmund – Villarreal / UEFA Champions League ,Under 7.5 - shot on target,2.89,2,Epicbet,Loss,https://epicbet.com/en/sports/football?matchId=882220&sportId=1&categoryId=27
 1763800559918,2025-11-22,17:00,Ice Hockey,Kiekko-Vantaa – Hermes / Finland Mestis ,1(0:2),2.3,6,Unibet,Loss,
 1763499607772,2025-11-19,05:00,Ice Hockey,Vegas Golden Knights – New York Rangers / NHL ,1,2.28,4,Unibet,Win,
 1763290204184,2025-11-18,21:45,Soccer,Romania – San Marino / World Cup 2026 - Qualifiers - UEFA ,Both to score - No,1.909,8,Betway,Loss,
@@ -18,4 +19,3 @@ id,date,startTime,sport,game,bet,odds,stake,company,result,deeplink
 1762419431484,2025-11-06,15:00,Tennis,Alexandre Muller – Lorenzo Musetti / ATP Athens,AH1(+4),2,2,Pinnacle,Loss,
 1762328684110,2025-11-05,18:00,Ice Hockey,Finland U20 – Slovakia U20 / International Friendlies U20 ,Over 5.5,2.25,5,Bet365,Win,
 1762159005261,2025-11-03,16:00,Tennis,Iga Swiatek – Elena Rybakina / WTA Finals - Hard ,Under 6.5 - break,1.92,6,Olybet,Win,
-1762073784155,2025-11-02,21:45,Soccer,Brest – Lyon / French Ligue 1 ,10 Or More Shots On Target,2.8,3,PokerStars,Loss,
