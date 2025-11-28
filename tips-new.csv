@@ -1,4 +1,6 @@
 id,date,startTime,sport,game,bet,odds,stake,company,result,deeplink
+1764360101730,2025-11-30,16:00,Soccer,Aston Villa – Wolverhampton Wanderers / England - Premier League ,Over 0.5 - penalties,4.79,1,Epicbet,,
+1764360032774,2025-11-29,22:00,Soccer,Tottenham Hotspur – Fulham / England - Premier League ,Over 0.5 - penalties,4.88,1,Epicbet,,
 1764142830112,2025-11-26,19:45,Soccer,FC Copenhagen – Kairat Almaty / UEFA Champions League ,FC Copenhagen Over 5.5 - shot on target,1.909,5,Bet365,Win,
 1764054441527,2025-11-25,22:00,Soccer,Chelsea – FC Barcelona / UEFA Champions League ,Under 10.5 - shot on target,2,5,Epicbet,Win,https://epicbet.com/en/sports/football?matchId=882229&sportId=1&categoryId=27
 1764054568414,2025-11-25,21:45,Soccer,Borussia Dortmund – Villarreal / UEFA Champions League ,Under 7.5 - shot on target,2.89,2,Epicbet,Loss,https://epicbet.com/en/sports/football?matchId=882220&sportId=1&categoryId=27
@@ -17,5 +19,3 @@ id,date,startTime,sport,game,bet,odds,stake,company,result,deeplink
 1762498147680,2025-11-09,15:00,Soccer,SJK – IF Gnistan / Finland Veikkausliiga ,Gnistan over 3.5 - corners ,1.8,3,Bet365,Loss,https://www.bet365.com/#/AC/B1/C1/D8/E183792301/F3/G40/
 1762419328733,2025-11-06,15:00,Tennis,Alexandre Muller – Lorenzo Musetti / ATP Athens,Over 10.5 1st set,3.75,2,Bet365,Loss,
 1762419431484,2025-11-06,15:00,Tennis,Alexandre Muller – Lorenzo Musetti / ATP Athens,AH1(+4),2,2,Pinnacle,Loss,
-1762328684110,2025-11-05,18:00,Ice Hockey,Finland U20 – Slovakia U20 / International Friendlies U20 ,Over 5.5,2.25,5,Bet365,Win,
-1762159005261,2025-11-03,16:00,Tennis,Iga Swiatek – Elena Rybakina / WTA Finals - Hard ,Under 6.5 - break,1.92,6,Olybet,Win,
