@@ -1,4 +1,5 @@
 id,date,startTime,sport,game,bet,odds,stake,company,result,deeplink
+1765264753982,2025-12-12,23:10,Darts,"van Veen, G – Reyes, C  / PDC World Championship",AH2(+2.5),3.58,4,Epicbet,,https://epicbet.com/en/sports/darts?matchId=925710&sportId=15&categoryId=4924
 1764884199482,2025-12-06,17:00,Soccer,Manchester City – Sunderland / England - Premier League ,Over 0.5 - penalties,4.52,2,Epicbet,Loss,
 1764867111898,2025-12-04,21:30,Handball,Netherlands Women – Tunisia Women / World Championship Women ,Over 55.5,1.64,5,Epicbet,Win,
 1764360101730,2025-11-30,16:00,Soccer,Aston Villa – Wolverhampton Wanderers / England - Premier League ,Over 0.5 - penalties,4.79,1,Epicbet,Loss,
@@ -18,4 +19,3 @@ id,date,startTime,sport,game,bet,odds,stake,company,result,deeplink
 1762936000597,2025-11-12,20:00,Ice Hockey,Kongsvinger Knights – Gruner IL / Norway 1. divisjon ,2,1.74,4,Epicbet,Win,https://epicbet.com/en/sports/ice-hockey?matchId=828617&sportId=7&categoryId=3481
 1762498462355,2025-11-12,18:00,Ice Hockey,SaiPa – Ässät,1 (incl. overtime and penalties),1.909,5,Ninja Casino,Loss,https://www.ninjacasino.com/sports-betting#/sport/70/category/640/championship/3237/event/13300765
 1762880959302,2025-11-12,05:00,Ice Hockey,Carolina Hurricanes - Washington Capitals / North America - NHL ,1,2.01,2,Pinnacle,Loss,
-1762497734524,2025-11-09,18:00,Soccer,Manchester City – Liverpool / England - Premier League ,Over 0.5 - penalties,4.88,1,Epicbet,Win,https://epicbet.com/en/sports/?matchId=852786&sportId=1
