@@ -1,7 +1,7 @@
 id,date,startTime,sport,game,bet,odds,stake,company,result,deeplink
-1765611146604,2025-12-14,18:30,Handball,Germany (W) – Norway (W) / World Championship (W) ,Over 24.5 1st team,1.88,6,Unibet,,
-1765518643042,2025-12-14,17:30,Soccer,St Mirren – Celtic / Scotland League Cup ,Under 10.5 - corners,2.05,4,Ninja Casino,,
-1765518273108,2025-12-13,22:00,Soccer,Arsenal – Wolves / England Premier League ,Over 0.5 - penalties,4.88,2,Epicbet,,https://epicbet.com/en/sports/football?matchId=939946&sportId=1&categoryId=10
+1765611146604,2025-12-14,18:30,Handball,Germany (W) – Norway (W) / World Championship (W) ,Over 24.5 1st team,1.88,6,Unibet,Loss,
+1765518643042,2025-12-14,17:30,Soccer,St Mirren – Celtic / Scotland League Cup ,Under 10.5 - corners,2.05,4,Ninja Casino,Win,
+1765518273108,2025-12-13,22:00,Soccer,Arsenal – Wolves / England Premier League ,Over 0.5 - penalties,4.88,2,Epicbet,Loss,https://epicbet.com/en/sports/football?matchId=939946&sportId=1&categoryId=10
 1765264753982,2025-12-12,23:10,Darts,"van Veen, G – Reyes, C  / PDC World Championship",AH2(+2.5),3.58,4,Epicbet,Win,https://epicbet.com/en/sports/darts?matchId=925710&sportId=15&categoryId=4924
 1764884199482,2025-12-06,17:00,Soccer,Manchester City – Sunderland / England - Premier League ,Over 0.5 - penalties,4.52,2,Epicbet,Loss,
 1764867111898,2025-12-04,21:30,Handball,Netherlands Women – Tunisia Women / World Championship Women ,Over 55.5,1.64,5,Epicbet,Win,
