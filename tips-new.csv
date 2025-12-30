@@ -1,7 +1,7 @@
 id,date,startTime,sport,game,bet,odds,stake,company,result,deeplink
-1767003314188,2025-12-30,03:30,Ice Hockey,Canada U20 – Denmark U20 / World Junior Championship U20 ,AH2(+8.5),2.03,2,Epicbet,,
-1767003242794,2025-12-30,01:00,Ice Hockey,Slovakia (U20) – USA (U20) / World Championship U20 ,AH1(+2.5),3.8,3,Optibet,,
-1767003392387,2025-12-29,20:00,Ice Hockey,Germany U20 – Sweden U20 / World Junior Championship U20 ,AH1(+3.5),2.69,3,Epicbet,,
+1767003314188,2025-12-30,03:30,Ice Hockey,Canada U20 – Denmark U20 / World Junior Championship U20 ,AH2(+8.5),2.03,2,Epicbet,Win,
+1767003242794,2025-12-30,01:00,Ice Hockey,Slovakia (U20) – USA (U20) / World Championship U20 ,AH1(+2.5),3.8,3,Optibet,Win,
+1767003392387,2025-12-29,20:00,Ice Hockey,Germany U20 – Sweden U20 / World Junior Championship U20 ,AH1(+3.5),2.69,3,Epicbet,Loss,
 1766305470819,2025-12-21,19:00,Tennis,Learner Tien – Alexander Blockx / ATP Next Gen Finals ,1,1.72,8,Epicbet,Win,
 1766126356128,2025-12-20,04:00,Boxing,"Paul, Jake – Joshua, Anthony / International Matchups ",Under 2.5 - rounds,2.5,4,Pinnacle,Loss,
 1765611146604,2025-12-14,18:30,Handball,Germany (W) – Norway (W) / World Championship (W) ,Over 24.5 1st team,1.88,6,Unibet,Loss,
